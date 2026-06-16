@@ -1,0 +1,5511 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "notification_scheduling_flow",
+        "label": "Course notification scheduling flow",
+        "nodes": [
+          "notifications_notification_screen_togglemorningreminder",
+          "services_notification_service_schedulecoursenotifications",
+          "services_notification_service_schedulenotification",
+          "services_notification_service_cancelall",
+          "services_notification_service_getdayname"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "lib/core/services/notification_service.dart"
+      },
+      {
+        "id": "course_persistence_lifecycle",
+        "label": "Course persistence and reschedule lifecycle",
+        "nodes": [
+          "features_home_screen_savecourses",
+          "features_home_screen_loaddata",
+          "concept_shared_preferences_persistence",
+          "models_course_model_course",
+          "services_notification_service_schedulecoursenotifications"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "lib/features/home_screen.dart"
+      },
+      {
+        "id": "course_creation_flow",
+        "label": "Course creation flow",
+        "nodes": [
+          "features_home_screen_gotoaddcoursescreen",
+          "schedule_add_course_screen_addcoursescreen",
+          "schedule_add_course_screen_savecourse",
+          "models_course_model_course"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "lib/features/schedule/add_course_screen.dart"
+      },
+      {
+        "id": "flutter_plugin_registration_flow",
+        "label": "Flutter plugin registration bootstrap across platforms",
+        "nodes": [
+          "runner_appdelegate_didinitializeimplicitflutterengine",
+          "runner_generatedpluginregistrant_registerwithregistry",
+          "flutter_generatedpluginregistrant_registergeneratedplugins"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "ios/Runner/AppDelegate.swift"
+      },
+      {
+        "id": "plugin_registration_pattern",
+        "label": "Cross-platform Plugin Registration",
+        "nodes": [
+          "plugins_generatedpluginregistrant_generatedpluginregistrant",
+          "flutter_generated_plugin_registrant_fl_register_plugins",
+          "flutter_generated_plugin_registrant_registerplugins"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "linux/flutter/generated_plugin_registrant.cc"
+      },
+      {
+        "id": "native_window_bootstrap",
+        "label": "Native App Bootstrap Entry Points",
+        "nodes": [
+          "runner_main_main",
+          "runner_main_wwinmain",
+          "runner_my_application_myapplication",
+          "runner_flutter_window_flutterwindow"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.75,
+        "source_file": "windows/runner/main.cpp"
+      },
+      {
+        "id": "app_branding_icon_set",
+        "label": "App Branding Icon Set (all platform/resolution variants)",
+        "nodes": [
+          "app_icon_artwork",
+          "android_launcher_icon",
+          "ios_app_icon"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "assets/icon.png"
+      },
+      {
+        "id": "app_branding",
+        "label": "App Branding \u2014 platform icons and launch imagery",
+        "nodes": [
+          "macos_app_icon",
+          "web_app_icon",
+          "app_icon_artwork",
+          "ios_launch_image"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.75,
+        "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "build.gradle.kts",
+      "file_type": "code",
+      "source_file": "android/build.gradle.kts",
+      "source_location": "L1",
+      "id": "android_build_gradle_kts",
+      "community": 26,
+      "norm_label": "build.gradle.kts"
+    },
+    {
+      "label": "settings.gradle.kts",
+      "file_type": "code",
+      "source_file": "android/settings.gradle.kts",
+      "source_location": "L1",
+      "id": "android_settings_gradle_kts",
+      "community": 27,
+      "norm_label": "settings.gradle.kts"
+    },
+    {
+      "label": "build.gradle.kts",
+      "file_type": "code",
+      "source_file": "android/app/build.gradle.kts",
+      "source_location": "L1",
+      "id": "android_app_build_gradle_kts",
+      "community": 28,
+      "norm_label": "build.gradle.kts"
+    },
+    {
+      "label": "GeneratedPluginRegistrant.java",
+      "file_type": "code",
+      "source_file": "android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+      "source_location": "L1",
+      "id": "android_app_src_main_java_io_flutter_plugins_generatedpluginregistrant_java",
+      "community": 19,
+      "norm_label": "generatedpluginregistrant.java"
+    },
+    {
+      "label": "GeneratedPluginRegistrant",
+      "file_type": "code",
+      "source_file": "android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+      "source_location": "L14",
+      "id": "plugins_generatedpluginregistrant_generatedpluginregistrant",
+      "community": 19,
+      "norm_label": "generatedpluginregistrant"
+    },
+    {
+      "label": ".registerWith()",
+      "file_type": "code",
+      "source_file": "android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+      "source_location": "L17",
+      "id": "plugins_generatedpluginregistrant_generatedpluginregistrant_registerwith",
+      "community": 19,
+      "norm_label": ".registerwith()"
+    },
+    {
+      "label": "MainActivity.kt",
+      "file_type": "code",
+      "source_file": "android/app/src/main/kotlin/com/example/mobilproje/MainActivity.kt",
+      "source_location": "L1",
+      "id": "android_app_src_main_kotlin_com_example_mobilproje_mainactivity_kt",
+      "community": 20,
+      "norm_label": "mainactivity.kt"
+    },
+    {
+      "label": "MainActivity",
+      "file_type": "code",
+      "source_file": "android/app/src/main/kotlin/com/example/mobilproje/MainActivity.kt",
+      "source_location": "L5",
+      "id": "mobilproje_mainactivity_mainactivity",
+      "community": 20,
+      "norm_label": "mainactivity"
+    },
+    {
+      "label": "flutter_export_environment.sh",
+      "file_type": "code",
+      "source_file": "ios/Flutter/flutter_export_environment.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "ios_flutter_flutter_export_environment_sh",
+      "community": 23,
+      "norm_label": "flutter_export_environment.sh"
+    },
+    {
+      "label": "flutter_export_environment.sh script",
+      "file_type": "code",
+      "source_file": "ios/Flutter/flutter_export_environment.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "volumes_ssd_t7_mobilproje_ios_flutter_flutter_export_environment_sh__entry",
+      "community": 23,
+      "norm_label": "flutter_export_environment.sh script"
+    },
+    {
+      "label": "flutter_lldb_helper.py",
+      "file_type": "code",
+      "source_file": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+      "source_location": "L1",
+      "id": "ios_flutter_ephemeral_flutter_lldb_helper_py",
+      "community": 18,
+      "norm_label": "flutter_lldb_helper.py"
+    },
+    {
+      "label": "handle_new_rx_page()",
+      "file_type": "code",
+      "source_file": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+      "source_location": "L7",
+      "id": "ephemeral_flutter_lldb_helper_handle_new_rx_page",
+      "community": 18,
+      "norm_label": "handle_new_rx_page()"
+    },
+    {
+      "label": "__lldb_init_module()",
+      "file_type": "code",
+      "source_file": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+      "source_location": "L24",
+      "id": "ephemeral_flutter_lldb_helper_lldb_init_module",
+      "community": 18,
+      "norm_label": "__lldb_init_module()"
+    },
+    {
+      "label": "Intercept NOTIFY_DEBUGGER_ABOUT_RX_PAGES and touch the pages.",
+      "file_type": "rationale",
+      "source_file": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+      "source_location": "L8",
+      "id": "ephemeral_flutter_lldb_helper_rationale_8",
+      "community": 18,
+      "norm_label": "intercept notify_debugger_about_rx_pages and touch the pages."
+    },
+    {
+      "label": "AppDelegate.swift",
+      "file_type": "code",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L1",
+      "id": "ios_runner_appdelegate_swift",
+      "community": 10,
+      "norm_label": "appdelegate.swift"
+    },
+    {
+      "label": "AppDelegate",
+      "file_type": "code",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "id": "ios_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "community": 10,
+      "norm_label": "appdelegate"
+    },
+    {
+      "label": "FlutterAppDelegate",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "flutterappdelegate",
+      "community": 10,
+      "norm_label": "flutterappdelegate"
+    },
+    {
+      "label": "FlutterImplicitEngineDelegate",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "flutterimplicitenginedelegate",
+      "community": 10,
+      "norm_label": "flutterimplicitenginedelegate"
+    },
+    {
+      "label": ".application()",
+      "file_type": "code",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L6",
+      "id": "runner_appdelegate_appdelegate_application",
+      "community": 10,
+      "norm_label": ".application()"
+    },
+    {
+      "label": ".didInitializeImplicitFlutterEngine()",
+      "file_type": "code",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L13",
+      "id": "runner_appdelegate_appdelegate_didinitializeimplicitflutterengine",
+      "community": 10,
+      "norm_label": ".didinitializeimplicitflutterengine()"
+    },
+    {
+      "label": "GeneratedPluginRegistrant.h",
+      "file_type": "code",
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.h",
+      "source_location": "L1",
+      "id": "ios_runner_generatedpluginregistrant_h",
+      "community": 29,
+      "norm_label": "generatedpluginregistrant.h"
+    },
+    {
+      "label": "GeneratedPluginRegistrant.m",
+      "file_type": "code",
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": "L1",
+      "id": "ios_runner_generatedpluginregistrant_m",
+      "community": 5,
+      "norm_label": "generatedpluginregistrant.m"
+    },
+    {
+      "label": "GeneratedPluginRegistrant",
+      "file_type": "code",
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": "L27",
+      "id": "runner_generatedpluginregistrant_generatedpluginregistrant",
+      "community": 5,
+      "norm_label": "generatedpluginregistrant"
+    },
+    {
+      "label": "-registerWithRegistry",
+      "file_type": "code",
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": "L29",
+      "id": "runner_generatedpluginregistrant_generatedpluginregistrant_registerwithregistry",
+      "community": 5,
+      "norm_label": "-registerwithregistry"
+    },
+    {
+      "label": "Runner-Bridging-Header.h",
+      "file_type": "code",
+      "source_file": "ios/Runner/Runner-Bridging-Header.h",
+      "source_location": "L1",
+      "id": "ios_runner_runner_bridging_header_h",
+      "community": 30,
+      "norm_label": "runner-bridging-header.h"
+    },
+    {
+      "label": "SceneDelegate.swift",
+      "file_type": "code",
+      "source_file": "ios/Runner/SceneDelegate.swift",
+      "source_location": "L1",
+      "id": "ios_runner_scenedelegate_swift",
+      "community": 21,
+      "norm_label": "scenedelegate.swift"
+    },
+    {
+      "label": "SceneDelegate",
+      "file_type": "code",
+      "source_file": "ios/Runner/SceneDelegate.swift",
+      "source_location": "L4",
+      "id": "runner_scenedelegate_scenedelegate",
+      "community": 21,
+      "norm_label": "scenedelegate"
+    },
+    {
+      "label": "FlutterSceneDelegate",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "flutterscenedelegate",
+      "community": 21,
+      "norm_label": "flutterscenedelegate"
+    },
+    {
+      "label": "Contents.json",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L1",
+      "id": "ios_runner_assets_xcassets_appicon_appiconset_contents_json",
+      "community": 15,
+      "norm_label": "contents.json"
+    },
+    {
+      "label": "images",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L2",
+      "id": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_images",
+      "community": 15,
+      "norm_label": "images"
+    },
+    {
+      "label": "info",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L118",
+      "id": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "community": 15,
+      "norm_label": "info"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L119",
+      "id": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_version",
+      "community": 15,
+      "norm_label": "version"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L120",
+      "id": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_author",
+      "community": 15,
+      "norm_label": "author"
+    },
+    {
+      "label": "Contents.json",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L1",
+      "id": "ios_runner_assets_xcassets_launchimage_imageset_contents_json",
+      "community": 16,
+      "norm_label": "contents.json"
+    },
+    {
+      "label": "images",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L2",
+      "id": "launchimage_imageset_contents_images",
+      "community": 16,
+      "norm_label": "images"
+    },
+    {
+      "label": "info",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L19",
+      "id": "launchimage_imageset_contents_info",
+      "community": 16,
+      "norm_label": "info"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L20",
+      "id": "launchimage_imageset_contents_info_version",
+      "community": 16,
+      "norm_label": "version"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L21",
+      "id": "launchimage_imageset_contents_info_author",
+      "community": 16,
+      "norm_label": "author"
+    },
+    {
+      "label": "RunnerTests.swift",
+      "file_type": "code",
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": "L1",
+      "id": "ios_runnertests_runnertests_swift",
+      "community": 13,
+      "norm_label": "runnertests.swift"
+    },
+    {
+      "label": "RunnerTests",
+      "file_type": "code",
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
+      "id": "ios_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "community": 13,
+      "norm_label": "runnertests"
+    },
+    {
+      "label": "XCTestCase",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "xctestcase",
+      "community": 13,
+      "norm_label": "xctestcase"
+    },
+    {
+      "label": ".testExample()",
+      "file_type": "code",
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": "L7",
+      "id": "ios_runnertests_runnertests_swift_runnertests_runnertests_runnertests_testexample",
+      "community": 13,
+      "norm_label": ".testexample()"
+    },
+    {
+      "label": "main.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "lib_main_dart",
+      "community": 11,
+      "norm_label": "main.dart"
+    },
+    {
+      "label": "DevamsizlikTakipApp",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_main_dart_devamsizliktakipapp",
+      "community": 11,
+      "norm_label": "devamsizliktakipapp"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_main_dart_main",
+      "community": 11,
+      "norm_label": "main"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_main_dart_build",
+      "community": 11,
+      "norm_label": "build"
+    },
+    {
+      "label": "MaterialApp",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_main_dart_materialapp",
+      "community": 11,
+      "norm_label": "materialapp"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "lib_main_dart_package_flutter_material_dart",
+      "community": 11,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:timezone/data/latest_all.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "package_timezone_data_latest_all_dart",
+      "community": 11,
+      "norm_label": "package:timezone/data/latest_all.dart"
+    },
+    {
+      "label": "package:timezone/timezone.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "lib_main_dart_package_timezone_timezone_dart",
+      "community": 11,
+      "norm_label": "package:timezone/timezone.dart"
+    },
+    {
+      "label": "features/splash_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "features_splash_screen_dart",
+      "community": 11,
+      "norm_label": "features/splash_screen.dart"
+    },
+    {
+      "label": "core/services/notification_service.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "lib_main_dart_core_services_notification_service_dart",
+      "community": 11,
+      "norm_label": "core/services/notification_service.dart"
+    },
+    {
+      "label": "course_model.dart",
+      "file_type": "code",
+      "source_file": "lib/core/models/course_model.dart",
+      "source_location": null,
+      "id": "lib_core_models_course_model_dart",
+      "community": 24,
+      "norm_label": "course_model.dart"
+    },
+    {
+      "label": "Course",
+      "file_type": "code",
+      "source_file": "lib/core/models/course_model.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_core_models_course_model_dart_course",
+      "community": 24,
+      "norm_label": "course"
+    },
+    {
+      "label": "notification_service.dart",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "lib_core_services_notification_service_dart",
+      "community": 12,
+      "norm_label": "notification_service.dart"
+    },
+    {
+      "label": "NotificationService",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_notificationservice",
+      "community": 12,
+      "norm_label": "notificationservice"
+    },
+    {
+      "label": "cancelAll",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_cancelall",
+      "community": 12,
+      "norm_label": "cancelall"
+    },
+    {
+      "label": "_scheduleNotification",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_schedulenotification",
+      "community": 12,
+      "norm_label": "_schedulenotification"
+    },
+    {
+      "label": "_getDayName",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_getdayname",
+      "community": 12,
+      "norm_label": "_getdayname"
+    },
+    {
+      "label": "package:flutter_local_notifications/flutter_local_notifications.dart",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "package_flutter_local_notifications_flutter_local_notifications_dart",
+      "community": 12,
+      "norm_label": "package:flutter_local_notifications/flutter_local_notifications.dart"
+    },
+    {
+      "label": "package:timezone/timezone.dart",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "lib_core_services_notification_service_dart_package_timezone_timezone_dart",
+      "community": 12,
+      "norm_label": "package:timezone/timezone.dart"
+    },
+    {
+      "label": "../models/course_model.dart",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "id": "models_course_model_dart",
+      "community": 12,
+      "norm_label": "../models/course_model.dart"
+    },
+    {
+      "label": "home_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "lib_features_home_screen_dart",
+      "community": 0,
+      "norm_label": "home_screen.dart"
+    },
+    {
+      "label": "HomeScreen",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_homescreen",
+      "community": 0,
+      "norm_label": "homescreen"
+    },
+    {
+      "label": "_HomeScreenState",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_homescreenstate",
+      "community": 0,
+      "norm_label": "_homescreenstate"
+    },
+    {
+      "label": "initState",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_initstate",
+      "community": 0,
+      "norm_label": "initstate"
+    },
+    {
+      "label": "_getTodayName",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_gettodayname",
+      "community": 0,
+      "norm_label": "_gettodayname"
+    },
+    {
+      "label": "_markAbsent",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_markabsent",
+      "community": 0,
+      "norm_label": "_markabsent"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_build",
+      "community": 0,
+      "norm_label": "build"
+    },
+    {
+      "label": "_buildWelcomeScreen",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildwelcomescreen",
+      "community": 0,
+      "norm_label": "_buildwelcomescreen"
+    },
+    {
+      "label": "Scaffold",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_scaffold",
+      "community": 0,
+      "norm_label": "scaffold"
+    },
+    {
+      "label": "_showBottomMenu",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_showbottommenu",
+      "community": 0,
+      "norm_label": "_showbottommenu"
+    },
+    {
+      "label": "Padding",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_padding",
+      "community": 0,
+      "norm_label": "padding"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_sizedbox",
+      "community": 0,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "Opacity",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_opacity",
+      "community": 0,
+      "norm_label": "opacity"
+    },
+    {
+      "label": "_buildClickableIndicator",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildclickableindicator",
+      "community": 0,
+      "norm_label": "_buildclickableindicator"
+    },
+    {
+      "label": "GestureDetector",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_gesturedetector",
+      "community": 0,
+      "norm_label": "gesturedetector"
+    },
+    {
+      "label": "_goToAddCourseScreen",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_gotoaddcoursescreen",
+      "community": 0,
+      "norm_label": "_gotoaddcoursescreen"
+    },
+    {
+      "label": "_buildTodayPage",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildtodaypage",
+      "community": 0,
+      "norm_label": "_buildtodaypage"
+    },
+    {
+      "label": "Center",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_center",
+      "community": 0,
+      "norm_label": "center"
+    },
+    {
+      "label": "_buildStandardCourseCard",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildstandardcoursecard",
+      "community": 0,
+      "norm_label": "_buildstandardcoursecard"
+    },
+    {
+      "label": "_buildAllCoursesPage",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildallcoursespage",
+      "community": 0,
+      "norm_label": "_buildallcoursespage"
+    },
+    {
+      "label": "Column",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_column",
+      "community": 0,
+      "norm_label": "column"
+    },
+    {
+      "label": "Dismissible",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_dismissible",
+      "community": 0,
+      "norm_label": "dismissible"
+    },
+    {
+      "label": "_buildCriticalPage",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildcriticalpage",
+      "community": 0,
+      "norm_label": "_buildcriticalpage"
+    },
+    {
+      "label": "Container",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_container",
+      "community": 0,
+      "norm_label": "container"
+    },
+    {
+      "label": "_buildPremiumCriticalCard",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildpremiumcriticalcard",
+      "community": 0,
+      "norm_label": "_buildpremiumcriticalcard"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "lib_features_home_screen_dart_package_flutter_material_dart",
+      "community": 0,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "dart:convert",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "dart_convert",
+      "community": 0,
+      "norm_label": "dart:convert"
+    },
+    {
+      "label": "package:shared_preferences/shared_preferences.dart",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "lib_features_home_screen_dart_package_shared_preferences_shared_preferences_dart",
+      "community": 0,
+      "norm_label": "package:shared_preferences/shared_preferences.dart"
+    },
+    {
+      "label": "../core/models/course_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "lib_features_home_screen_dart_core_models_course_model_dart",
+      "community": 0,
+      "norm_label": "../core/models/course_model.dart"
+    },
+    {
+      "label": "schedule/add_course_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "schedule_add_course_screen_dart",
+      "community": 0,
+      "norm_label": "schedule/add_course_screen.dart"
+    },
+    {
+      "label": "notifications/notification_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "notifications_notification_screen_dart",
+      "community": 0,
+      "norm_label": "notifications/notification_screen.dart"
+    },
+    {
+      "label": "../core/services/notification_service.dart",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "id": "lib_features_home_screen_dart_core_services_notification_service_dart",
+      "community": 0,
+      "norm_label": "../core/services/notification_service.dart"
+    },
+    {
+      "label": "splash_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "lib_features_splash_screen_dart",
+      "community": 7,
+      "norm_label": "splash_screen.dart"
+    },
+    {
+      "label": "SplashScreen",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_splashscreen",
+      "community": 7,
+      "norm_label": "splashscreen"
+    },
+    {
+      "label": "_SplashScreenState",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_splashscreenstate",
+      "community": 7,
+      "norm_label": "_splashscreenstate"
+    },
+    {
+      "label": "initState",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_initstate",
+      "community": 7,
+      "norm_label": "initstate"
+    },
+    {
+      "label": "dispose",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_dispose",
+      "community": 7,
+      "norm_label": "dispose"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_build",
+      "community": 7,
+      "norm_label": "build"
+    },
+    {
+      "label": "Scaffold",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_scaffold",
+      "community": 7,
+      "norm_label": "scaffold"
+    },
+    {
+      "label": "Row",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_row",
+      "community": 7,
+      "norm_label": "row"
+    },
+    {
+      "label": "Text",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_text",
+      "community": 7,
+      "norm_label": "text"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_sizedbox",
+      "community": 7,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "lib_features_splash_screen_dart_package_flutter_material_dart",
+      "community": 7,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "home_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "id": "home_screen_dart",
+      "community": 7,
+      "norm_label": "home_screen.dart"
+    },
+    {
+      "label": "notification_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "lib_features_notifications_notification_screen_dart",
+      "community": 8,
+      "norm_label": "notification_screen.dart"
+    },
+    {
+      "label": "NotificationScreen",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_notificationscreen",
+      "community": 8,
+      "norm_label": "notificationscreen"
+    },
+    {
+      "label": "_NotificationScreenState",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_notificationscreenstate",
+      "community": 8,
+      "norm_label": "_notificationscreenstate"
+    },
+    {
+      "label": "initState",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_initstate",
+      "community": 8,
+      "norm_label": "initstate"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_build",
+      "community": 8,
+      "norm_label": "build"
+    },
+    {
+      "label": "Scaffold",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_scaffold",
+      "community": 8,
+      "norm_label": "scaffold"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_sizedbox",
+      "community": 8,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "lib_features_notifications_notification_screen_dart_package_flutter_material_dart",
+      "community": 8,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:shared_preferences/shared_preferences.dart",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "lib_features_notifications_notification_screen_dart_package_shared_preferences_shared_preferences_dart",
+      "community": 8,
+      "norm_label": "package:shared_preferences/shared_preferences.dart"
+    },
+    {
+      "label": "../../core/services/notification_service.dart",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "lib_features_notifications_notification_screen_dart_core_services_notification_service_dart",
+      "community": 8,
+      "norm_label": "../../core/services/notification_service.dart"
+    },
+    {
+      "label": "../../core/models/course_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "id": "lib_features_notifications_notification_screen_dart_core_models_course_model_dart",
+      "community": 8,
+      "norm_label": "../../core/models/course_model.dart"
+    },
+    {
+      "label": "add_course_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "lib_features_schedule_add_course_screen_dart",
+      "community": 6,
+      "norm_label": "add_course_screen.dart"
+    },
+    {
+      "label": "AddCourseScreen",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_addcoursescreen",
+      "community": 6,
+      "norm_label": "addcoursescreen"
+    },
+    {
+      "label": "_AddCourseScreenState",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_addcoursescreenstate",
+      "community": 6,
+      "norm_label": "_addcoursescreenstate"
+    },
+    {
+      "label": "_saveCourse",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_savecourse",
+      "community": 6,
+      "norm_label": "_savecourse"
+    },
+    {
+      "label": "dispose",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_dispose",
+      "community": 6,
+      "norm_label": "dispose"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_build",
+      "community": 6,
+      "norm_label": "build"
+    },
+    {
+      "label": "Scaffold",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_scaffold",
+      "community": 6,
+      "norm_label": "scaffold"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_sizedbox",
+      "community": 6,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "InkWell",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_inkwell",
+      "community": 6,
+      "norm_label": "inkwell"
+    },
+    {
+      "label": "_buildCounterButton",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_buildcounterbutton",
+      "community": 6,
+      "norm_label": "_buildcounterbutton"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "lib_features_schedule_add_course_screen_dart_package_flutter_material_dart",
+      "community": 6,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "../../core/models/course_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "id": "lib_features_schedule_add_course_screen_dart_core_models_course_model_dart",
+      "community": 6,
+      "norm_label": "../../core/models/course_model.dart"
+    },
+    {
+      "label": "generated_plugin_registrant.cc",
+      "file_type": "code",
+      "source_file": "linux/flutter/generated_plugin_registrant.cc",
+      "source_location": "L1",
+      "id": "linux_flutter_generated_plugin_registrant_cc",
+      "community": 3,
+      "norm_label": "generated_plugin_registrant.cc"
+    },
+    {
+      "label": "fl_register_plugins()",
+      "file_type": "code",
+      "source_file": "linux/flutter/generated_plugin_registrant.cc",
+      "source_location": "L11",
+      "id": "flutter_generated_plugin_registrant_fl_register_plugins",
+      "community": 3,
+      "norm_label": "fl_register_plugins()"
+    },
+    {
+      "label": "generated_plugin_registrant.h",
+      "file_type": "code",
+      "source_file": "linux/flutter/generated_plugin_registrant.h",
+      "source_location": "L1",
+      "id": "linux_flutter_generated_plugin_registrant_h",
+      "community": 3,
+      "norm_label": "generated_plugin_registrant.h"
+    },
+    {
+      "label": "main.cc",
+      "file_type": "code",
+      "source_file": "linux/runner/main.cc",
+      "source_location": "L1",
+      "id": "linux_runner_main_cc",
+      "community": 3,
+      "norm_label": "main.cc"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "linux/runner/main.cc",
+      "source_location": "L3",
+      "id": "runner_main_main",
+      "community": 3,
+      "norm_label": "main()"
+    },
+    {
+      "label": "my_application.cc",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L1",
+      "id": "linux_runner_my_application_cc",
+      "community": 3,
+      "norm_label": "my_application.cc"
+    },
+    {
+      "label": "_MyApplication",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L10",
+      "id": "runner_my_application_myapplication",
+      "community": 3,
+      "norm_label": "_myapplication"
+    },
+    {
+      "label": "parent_instance",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L11",
+      "id": "runner_my_application_myapplication_parent_instance",
+      "community": 3,
+      "norm_label": "parent_instance"
+    },
+    {
+      "label": "dart_entrypoint_arguments",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L12",
+      "id": "runner_my_application_myapplication_dart_entrypoint_arguments",
+      "community": 3,
+      "norm_label": "dart_entrypoint_arguments"
+    },
+    {
+      "label": "first_frame_cb()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L18",
+      "id": "runner_my_application_first_frame_cb",
+      "community": 3,
+      "norm_label": "first_frame_cb()"
+    },
+    {
+      "label": "my_application_activate()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L23",
+      "id": "runner_my_application_my_application_activate",
+      "community": 3,
+      "norm_label": "my_application_activate()"
+    },
+    {
+      "label": "my_application_local_command_line()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L82",
+      "id": "runner_my_application_my_application_local_command_line",
+      "community": 3,
+      "norm_label": "my_application_local_command_line()"
+    },
+    {
+      "label": "my_application_startup()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L103",
+      "id": "runner_my_application_my_application_startup",
+      "community": 3,
+      "norm_label": "my_application_startup()"
+    },
+    {
+      "label": "my_application_shutdown()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L112",
+      "id": "runner_my_application_my_application_shutdown",
+      "community": 3,
+      "norm_label": "my_application_shutdown()"
+    },
+    {
+      "label": "my_application_dispose()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L121",
+      "id": "runner_my_application_my_application_dispose",
+      "community": 3,
+      "norm_label": "my_application_dispose()"
+    },
+    {
+      "label": "my_application_class_init()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L127",
+      "id": "runner_my_application_my_application_class_init",
+      "community": 3,
+      "norm_label": "my_application_class_init()"
+    },
+    {
+      "label": "my_application_init()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L136",
+      "id": "runner_my_application_my_application_init",
+      "community": 3,
+      "norm_label": "my_application_init()"
+    },
+    {
+      "label": "my_application_new()",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L138",
+      "id": "runner_my_application_my_application_new",
+      "community": 3,
+      "norm_label": "my_application_new()"
+    },
+    {
+      "label": "my_application.h",
+      "file_type": "code",
+      "source_file": "linux/runner/my_application.h",
+      "source_location": "L1",
+      "id": "linux_runner_my_application_h",
+      "community": 3,
+      "norm_label": "my_application.h"
+    },
+    {
+      "label": "GeneratedPluginRegistrant.swift",
+      "file_type": "code",
+      "source_file": "macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L1",
+      "id": "macos_flutter_generatedpluginregistrant_swift",
+      "community": 5,
+      "norm_label": "generatedpluginregistrant.swift"
+    },
+    {
+      "label": "RegisterGeneratedPlugins()",
+      "file_type": "code",
+      "source_file": "macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L12",
+      "id": "flutter_generatedpluginregistrant_registergeneratedplugins",
+      "community": 5,
+      "norm_label": "registergeneratedplugins()"
+    },
+    {
+      "label": "flutter_export_environment.sh",
+      "file_type": "code",
+      "source_file": "macos/Flutter/ephemeral/flutter_export_environment.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "macos_flutter_ephemeral_flutter_export_environment_sh",
+      "community": 25,
+      "norm_label": "flutter_export_environment.sh"
+    },
+    {
+      "label": "flutter_export_environment.sh script",
+      "file_type": "code",
+      "source_file": "macos/Flutter/ephemeral/flutter_export_environment.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "volumes_ssd_t7_mobilproje_macos_flutter_ephemeral_flutter_export_environment_sh__entry",
+      "community": 25,
+      "norm_label": "flutter_export_environment.sh script"
+    },
+    {
+      "label": "AppDelegate.swift",
+      "file_type": "code",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L1",
+      "id": "macos_runner_appdelegate_swift",
+      "community": 10,
+      "norm_label": "appdelegate.swift"
+    },
+    {
+      "label": "AppDelegate",
+      "file_type": "code",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "id": "macos_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "community": 10,
+      "norm_label": "appdelegate"
+    },
+    {
+      "label": ".applicationShouldTerminateAfterLastWindowClosed()",
+      "file_type": "code",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L6",
+      "id": "runner_appdelegate_appdelegate_applicationshouldterminateafterlastwindowclosed",
+      "community": 10,
+      "norm_label": ".applicationshouldterminateafterlastwindowclosed()"
+    },
+    {
+      "label": ".applicationSupportsSecureRestorableState()",
+      "file_type": "code",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L10",
+      "id": "runner_appdelegate_appdelegate_applicationsupportssecurerestorablestate",
+      "community": 10,
+      "norm_label": ".applicationsupportssecurerestorablestate()"
+    },
+    {
+      "label": "MainFlutterWindow.swift",
+      "file_type": "code",
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L1",
+      "id": "macos_runner_mainflutterwindow_swift",
+      "community": 5,
+      "norm_label": "mainflutterwindow.swift"
+    },
+    {
+      "label": "MainFlutterWindow",
+      "file_type": "code",
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L4",
+      "id": "runner_mainflutterwindow_mainflutterwindow",
+      "community": 5,
+      "norm_label": "mainflutterwindow"
+    },
+    {
+      "label": "NSWindow",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "nswindow",
+      "community": 5,
+      "norm_label": "nswindow"
+    },
+    {
+      "label": ".awakeFromNib()",
+      "file_type": "code",
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L5",
+      "id": "runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "community": 5,
+      "norm_label": ".awakefromnib()"
+    },
+    {
+      "label": "Contents.json",
+      "file_type": "code",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L1",
+      "id": "macos_runner_assets_xcassets_appicon_appiconset_contents_json",
+      "community": 17,
+      "norm_label": "contents.json"
+    },
+    {
+      "label": "images",
+      "file_type": "code",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L2",
+      "id": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_images",
+      "community": 17,
+      "norm_label": "images"
+    },
+    {
+      "label": "info",
+      "file_type": "code",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L64",
+      "id": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "community": 17,
+      "norm_label": "info"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L65",
+      "id": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_version",
+      "community": 17,
+      "norm_label": "version"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L66",
+      "id": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_author",
+      "community": 17,
+      "norm_label": "author"
+    },
+    {
+      "label": "RunnerTests.swift",
+      "file_type": "code",
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L1",
+      "id": "macos_runnertests_runnertests_swift",
+      "community": 13,
+      "norm_label": "runnertests.swift"
+    },
+    {
+      "label": "RunnerTests",
+      "file_type": "code",
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
+      "id": "macos_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "community": 13,
+      "norm_label": "runnertests"
+    },
+    {
+      "label": ".testExample()",
+      "file_type": "code",
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L7",
+      "id": "macos_runnertests_runnertests_swift_runnertests_runnertests_runnertests_testexample",
+      "community": 13,
+      "norm_label": ".testexample()"
+    },
+    {
+      "label": "manifest.json",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L1",
+      "id": "web_manifest_json",
+      "community": 9,
+      "norm_label": "manifest.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L2",
+      "id": "web_manifest_name",
+      "community": 9,
+      "norm_label": "name"
+    },
+    {
+      "label": "short_name",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L3",
+      "id": "web_manifest_short_name",
+      "community": 9,
+      "norm_label": "short_name"
+    },
+    {
+      "label": "start_url",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L4",
+      "id": "web_manifest_start_url",
+      "community": 9,
+      "norm_label": "start_url"
+    },
+    {
+      "label": "display",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L5",
+      "id": "web_manifest_display",
+      "community": 9,
+      "norm_label": "display"
+    },
+    {
+      "label": "background_color",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L6",
+      "id": "web_manifest_background_color",
+      "community": 9,
+      "norm_label": "background_color"
+    },
+    {
+      "label": "theme_color",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L7",
+      "id": "web_manifest_theme_color",
+      "community": 9,
+      "norm_label": "theme_color"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L8",
+      "id": "web_manifest_description",
+      "community": 9,
+      "norm_label": "description"
+    },
+    {
+      "label": "orientation",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L9",
+      "id": "web_manifest_orientation",
+      "community": 9,
+      "norm_label": "orientation"
+    },
+    {
+      "label": "prefer_related_applications",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L10",
+      "id": "web_manifest_prefer_related_applications",
+      "community": 9,
+      "norm_label": "prefer_related_applications"
+    },
+    {
+      "label": "icons",
+      "file_type": "code",
+      "source_file": "web/manifest.json",
+      "source_location": "L11",
+      "id": "web_manifest_icons",
+      "community": 9,
+      "norm_label": "icons"
+    },
+    {
+      "label": "generated_plugin_registrant.cc",
+      "file_type": "code",
+      "source_file": "windows/flutter/generated_plugin_registrant.cc",
+      "source_location": "L1",
+      "id": "windows_flutter_generated_plugin_registrant_cc",
+      "community": 4,
+      "norm_label": "generated_plugin_registrant.cc"
+    },
+    {
+      "label": "RegisterPlugins()",
+      "file_type": "code",
+      "source_file": "windows/flutter/generated_plugin_registrant.cc",
+      "source_location": "L11",
+      "id": "flutter_generated_plugin_registrant_registerplugins",
+      "community": 4,
+      "norm_label": "registerplugins()"
+    },
+    {
+      "label": "generated_plugin_registrant.h",
+      "file_type": "code",
+      "source_file": "windows/flutter/generated_plugin_registrant.h",
+      "source_location": "L1",
+      "id": "windows_flutter_generated_plugin_registrant_h",
+      "community": 4,
+      "norm_label": "generated_plugin_registrant.h"
+    },
+    {
+      "label": "flutter_window.cpp",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L1",
+      "id": "windows_runner_flutter_window_cpp",
+      "community": 4,
+      "norm_label": "flutter_window.cpp"
+    },
+    {
+      "label": "FlutterWindow()",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L7",
+      "id": "windows_runner_flutter_window_cpp_runner_flutter_window_flutterwindow",
+      "community": 4,
+      "norm_label": "flutterwindow()"
+    },
+    {
+      "label": "OnCreate()",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L12",
+      "id": "runner_flutter_window_oncreate",
+      "community": 1,
+      "norm_label": "oncreate()"
+    },
+    {
+      "label": "OnDestroy()",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L42",
+      "id": "runner_flutter_window_ondestroy",
+      "community": 4,
+      "norm_label": "ondestroy()"
+    },
+    {
+      "label": "MessageHandler()",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L50",
+      "id": "runner_flutter_window_messagehandler",
+      "community": 4,
+      "norm_label": "messagehandler()"
+    },
+    {
+      "label": "flutter_window.h",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.h",
+      "source_location": "L1",
+      "id": "windows_runner_flutter_window_h",
+      "community": 4,
+      "norm_label": "flutter_window.h"
+    },
+    {
+      "label": "FlutterWindow()",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.h",
+      "source_location": "L12",
+      "id": "windows_runner_flutter_window_h_runner_flutter_window_flutterwindow",
+      "community": 4,
+      "norm_label": "flutterwindow()"
+    },
+    {
+      "label": "main.cpp",
+      "file_type": "code",
+      "source_file": "windows/runner/main.cpp",
+      "source_location": "L1",
+      "id": "windows_runner_main_cpp",
+      "community": 4,
+      "norm_label": "main.cpp"
+    },
+    {
+      "label": "wWinMain()",
+      "file_type": "code",
+      "source_file": "windows/runner/main.cpp",
+      "source_location": "L8",
+      "id": "runner_main_wwinmain",
+      "community": 4,
+      "norm_label": "wwinmain()"
+    },
+    {
+      "label": "resource.h",
+      "file_type": "code",
+      "source_file": "windows/runner/resource.h",
+      "source_location": "L1",
+      "id": "windows_runner_resource_h",
+      "community": 1,
+      "norm_label": "resource.h"
+    },
+    {
+      "label": "utils.cpp",
+      "file_type": "code",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L1",
+      "id": "windows_runner_utils_cpp",
+      "community": 4,
+      "norm_label": "utils.cpp"
+    },
+    {
+      "label": "CreateAndAttachConsole()",
+      "file_type": "code",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L10",
+      "id": "runner_utils_createandattachconsole",
+      "community": 4,
+      "norm_label": "createandattachconsole()"
+    },
+    {
+      "label": "GetCommandLineArguments()",
+      "file_type": "code",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L24",
+      "id": "runner_utils_getcommandlinearguments",
+      "community": 4,
+      "norm_label": "getcommandlinearguments()"
+    },
+    {
+      "label": "Utf8FromUtf16()",
+      "file_type": "code",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L44",
+      "id": "runner_utils_utf8fromutf16",
+      "community": 4,
+      "norm_label": "utf8fromutf16()"
+    },
+    {
+      "label": "utils.h",
+      "file_type": "code",
+      "source_file": "windows/runner/utils.h",
+      "source_location": "L1",
+      "id": "windows_runner_utils_h",
+      "community": 4,
+      "norm_label": "utils.h"
+    },
+    {
+      "label": "win32_window.cpp",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L1",
+      "id": "windows_runner_win32_window_cpp",
+      "community": 1,
+      "norm_label": "win32_window.cpp"
+    },
+    {
+      "label": "Scale()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L36",
+      "id": "runner_win32_window_scale",
+      "community": 1,
+      "norm_label": "scale()"
+    },
+    {
+      "label": "EnableFullDpiSupportIfAvailable()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L42",
+      "id": "runner_win32_window_enablefulldpisupportifavailable",
+      "community": 1,
+      "norm_label": "enablefulldpisupportifavailable()"
+    },
+    {
+      "label": "WindowClassRegistrar",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L59",
+      "id": "runner_win32_window_windowclassregistrar",
+      "community": 1,
+      "norm_label": "windowclassregistrar"
+    },
+    {
+      "label": ".~WindowClassRegistrar()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L61",
+      "id": "runner_win32_window_windowclassregistrar_windowclassregistrar",
+      "community": 1,
+      "norm_label": ".~windowclassregistrar()"
+    },
+    {
+      "label": ".GetInstance()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L64",
+      "id": "runner_win32_window_windowclassregistrar_getinstance",
+      "community": 1,
+      "norm_label": ".getinstance()"
+    },
+    {
+      "label": "GetWindowClass",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L73",
+      "id": "runner_win32_window_windowclassregistrar_getwindowclass",
+      "community": 1,
+      "norm_label": "getwindowclass"
+    },
+    {
+      "label": "UnregisterWindowClass",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L77",
+      "id": "runner_win32_window_windowclassregistrar_unregisterwindowclass",
+      "community": 1,
+      "norm_label": "unregisterwindowclass"
+    },
+    {
+      "label": "instance_",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L82",
+      "id": "runner_win32_window_windowclassregistrar_instance",
+      "community": 1,
+      "norm_label": "instance_"
+    },
+    {
+      "label": "class_registered_",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L84",
+      "id": "runner_win32_window_windowclassregistrar_class_registered",
+      "community": 1,
+      "norm_label": "class_registered_"
+    },
+    {
+      "label": "GetWindowClass()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L89",
+      "id": "runner_win32_window_getwindowclass",
+      "community": 1,
+      "norm_label": "getwindowclass()"
+    },
+    {
+      "label": "UnregisterWindowClass()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L109",
+      "id": "runner_win32_window_unregisterwindowclass",
+      "community": 1,
+      "norm_label": "unregisterwindowclass()"
+    },
+    {
+      "label": "Win32Window()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L114",
+      "id": "runner_win32_window_win32window",
+      "community": 1,
+      "norm_label": "win32window()"
+    },
+    {
+      "label": "Create()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L123",
+      "id": "runner_win32_window_create",
+      "community": 1,
+      "norm_label": "create()"
+    },
+    {
+      "label": "Show()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L152",
+      "id": "runner_win32_window_show",
+      "community": 1,
+      "norm_label": "show()"
+    },
+    {
+      "label": "WndProc()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L157",
+      "id": "runner_win32_window_wndproc",
+      "community": 1,
+      "norm_label": "wndproc()"
+    },
+    {
+      "label": "MessageHandler()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L176",
+      "id": "runner_win32_window_messagehandler",
+      "community": 1,
+      "norm_label": "messagehandler()"
+    },
+    {
+      "label": "Destroy()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L224",
+      "id": "runner_win32_window_destroy",
+      "community": 1,
+      "norm_label": "destroy()"
+    },
+    {
+      "label": "GetThisFromHandle()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L236",
+      "id": "runner_win32_window_getthisfromhandle",
+      "community": 1,
+      "norm_label": "getthisfromhandle()"
+    },
+    {
+      "label": "SetChildContent()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L241",
+      "id": "runner_win32_window_setchildcontent",
+      "community": 1,
+      "norm_label": "setchildcontent()"
+    },
+    {
+      "label": "GetClientArea()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L252",
+      "id": "runner_win32_window_getclientarea",
+      "community": 1,
+      "norm_label": "getclientarea()"
+    },
+    {
+      "label": "GetHandle()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L258",
+      "id": "runner_win32_window_gethandle",
+      "community": 1,
+      "norm_label": "gethandle()"
+    },
+    {
+      "label": "SetQuitOnClose()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L262",
+      "id": "runner_win32_window_setquitonclose",
+      "community": 1,
+      "norm_label": "setquitonclose()"
+    },
+    {
+      "label": "OnCreate()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L266",
+      "id": "runner_win32_window_oncreate",
+      "community": 1,
+      "norm_label": "oncreate()"
+    },
+    {
+      "label": "OnDestroy()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L271",
+      "id": "runner_win32_window_ondestroy",
+      "community": 1,
+      "norm_label": "ondestroy()"
+    },
+    {
+      "label": "UpdateTheme()",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L275",
+      "id": "runner_win32_window_updatetheme",
+      "community": 1,
+      "norm_label": "updatetheme()"
+    },
+    {
+      "label": "win32_window.h",
+      "file_type": "code",
+      "source_file": "windows/runner/win32_window.h",
+      "source_location": "L1",
+      "id": "windows_runner_win32_window_h",
+      "community": 4,
+      "norm_label": "win32_window.h"
+    },
+    {
+      "label": "main entrypoint",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_main_main",
+      "community": 2,
+      "norm_label": "main entrypoint"
+    },
+    {
+      "label": "DevamsizlikTakipApp",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_main_devamsizliktakipapp",
+      "community": 2,
+      "norm_label": "devamsizliktakipapp"
+    },
+    {
+      "label": "Course model",
+      "file_type": "code",
+      "source_file": "lib/core/models/course_model.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "models_course_model_course",
+      "community": 2,
+      "norm_label": "course model"
+    },
+    {
+      "label": "NotificationService",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "services_notification_service_notificationservice",
+      "community": 31,
+      "norm_label": "notificationservice"
+    },
+    {
+      "label": "NotificationService.initialize",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "services_notification_service_initialize",
+      "community": 2,
+      "norm_label": "notificationservice.initialize"
+    },
+    {
+      "label": "scheduleCourseNotifications",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "services_notification_service_schedulecoursenotifications",
+      "community": 2,
+      "norm_label": "schedulecoursenotifications"
+    },
+    {
+      "label": "_scheduleNotification",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "services_notification_service_schedulenotification",
+      "community": 2,
+      "norm_label": "_schedulenotification"
+    },
+    {
+      "label": "requestPermission",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "services_notification_service_requestpermission",
+      "community": 2,
+      "norm_label": "requestpermission"
+    },
+    {
+      "label": "cancelAll",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "services_notification_service_cancelall",
+      "community": 2,
+      "norm_label": "cancelall"
+    },
+    {
+      "label": "_getDayName",
+      "file_type": "code",
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "services_notification_service_getdayname",
+      "community": 2,
+      "norm_label": "_getdayname"
+    },
+    {
+      "label": "HomeScreen",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "features_home_screen_homescreen",
+      "community": 2,
+      "norm_label": "homescreen"
+    },
+    {
+      "label": "_loadData",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "features_home_screen_loaddata",
+      "community": 2,
+      "norm_label": "_loaddata"
+    },
+    {
+      "label": "_saveCourses",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "features_home_screen_savecourses",
+      "community": 2,
+      "norm_label": "_savecourses"
+    },
+    {
+      "label": "_markAbsent",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "features_home_screen_markabsent",
+      "community": 2,
+      "norm_label": "_markabsent"
+    },
+    {
+      "label": "_goToAddCourseScreen",
+      "file_type": "code",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "features_home_screen_gotoaddcoursescreen",
+      "community": 2,
+      "norm_label": "_gotoaddcoursescreen"
+    },
+    {
+      "label": "SplashScreen",
+      "file_type": "code",
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "features_splash_screen_splashscreen",
+      "community": 2,
+      "norm_label": "splashscreen"
+    },
+    {
+      "label": "NotificationScreen",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "notifications_notification_screen_notificationscreen",
+      "community": 2,
+      "norm_label": "notificationscreen"
+    },
+    {
+      "label": "_toggleMorningReminder",
+      "file_type": "code",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "notifications_notification_screen_togglemorningreminder",
+      "community": 2,
+      "norm_label": "_togglemorningreminder"
+    },
+    {
+      "label": "AddCourseScreen",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "schedule_add_course_screen_addcoursescreen",
+      "community": 2,
+      "norm_label": "addcoursescreen"
+    },
+    {
+      "label": "_saveCourse",
+      "file_type": "code",
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "schedule_add_course_screen_savecourse",
+      "community": 2,
+      "norm_label": "_savecourse"
+    },
+    {
+      "label": "SharedPreferences persistence (saved_courses)",
+      "file_type": "concept",
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_shared_preferences_persistence",
+      "community": 2,
+      "norm_label": "sharedpreferences persistence (saved_courses)"
+    },
+    {
+      "label": "morning_reminder setting flag",
+      "file_type": "concept",
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_morning_reminder_flag",
+      "community": 2,
+      "norm_label": "morning_reminder setting flag"
+    },
+    {
+      "label": "iOS AppDelegate",
+      "file_type": "code",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runner_appdelegate_appdelegate",
+      "community": 5,
+      "norm_label": "ios appdelegate"
+    },
+    {
+      "label": "iOS didInitializeImplicitFlutterEngine",
+      "file_type": "code",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runner_appdelegate_didinitializeimplicitflutterengine",
+      "community": 5,
+      "norm_label": "ios didinitializeimplicitflutterengine"
+    },
+    {
+      "label": "iOS registerWithRegistry",
+      "file_type": "code",
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runner_generatedpluginregistrant_registerwithregistry",
+      "community": 5,
+      "norm_label": "ios registerwithregistry"
+    },
+    {
+      "label": "iOS RunnerTests",
+      "file_type": "code",
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runnertests_runnertests_runnertests",
+      "community": 5,
+      "norm_label": "ios runnertests"
+    },
+    {
+      "label": "macOS AppDelegate",
+      "file_type": "code",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runner_appdelegate_appdelegate_macos",
+      "community": 5,
+      "norm_label": "macos appdelegate"
+    },
+    {
+      "label": "macOS awakeFromNib",
+      "file_type": "code",
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runner_mainflutterwindow_awakefromnib",
+      "community": 5,
+      "norm_label": "macos awakefromnib"
+    },
+    {
+      "label": "macOS RunnerTests",
+      "file_type": "code",
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runnertests_runnertests_runnertests_macos",
+      "community": 5,
+      "norm_label": "macos runnertests"
+    },
+    {
+      "label": "FlutterActivity",
+      "file_type": "code",
+      "source_file": "android/app/src/main/kotlin/com/example/mobilproje/MainActivity.kt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "flutter_activity_flutteractivity",
+      "community": 20,
+      "norm_label": "flutteractivity"
+    },
+    {
+      "label": "Android App Build Config",
+      "file_type": "concept",
+      "source_file": "android/app/build.gradle.kts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "app_build_gradle_android_build_config",
+      "community": 22,
+      "norm_label": "android app build config"
+    },
+    {
+      "label": "desugar_jdk_libs Dependency",
+      "file_type": "concept",
+      "source_file": "android/app/build.gradle.kts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "app_build_gradle_desugar_jdk_libs",
+      "community": 22,
+      "norm_label": "desugar_jdk_libs dependency"
+    },
+    {
+      "label": "FlutterWindow (Windows)",
+      "file_type": "code",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "runner_flutter_window_flutterwindow",
+      "community": 4,
+      "norm_label": "flutterwindow (windows)"
+    },
+    {
+      "label": "App Icon \u2014 white calendar with red X on black rounded square",
+      "file_type": "image",
+      "source_file": "assets/icon.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "app_icon_artwork",
+      "community": 14,
+      "norm_label": "app icon \u2014 white calendar with red x on black rounded square"
+    },
+    {
+      "label": "Android Launcher Icon (mipmap hdpi/mdpi/xhdpi/xxhdpi/xxxhdpi)",
+      "file_type": "image",
+      "source_file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "android_launcher_icon",
+      "community": 14,
+      "norm_label": "android launcher icon (mipmap hdpi/mdpi/xhdpi/xxhdpi/xxxhdpi)"
+    },
+    {
+      "label": "iOS App Icon (AppIcon.appiconset, 20x20 to 1024x1024 variants)",
+      "file_type": "image",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ios_app_icon",
+      "community": 14,
+      "norm_label": "ios app icon (appicon.appiconset, 20x20 to 1024x1024 variants)"
+    },
+    {
+      "label": "Calendar app branding: minimalist flat calendar glyph (white outline, three top binding rings, 3x4 grid of day cells) on a near-black rounded-square ground; one cell marked by a small red square crossed out with a grey X \u2014 implies a scheduling/calendar app emphasizing a cancelled, blocked, or unavailable day. Same artwork used across all platforms/resolutions.",
+      "file_type": "rationale",
+      "source_file": "assets/icon.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "app_icon_rationale",
+      "community": 14,
+      "norm_label": "calendar app branding: minimalist flat calendar glyph (white outline, three top binding rings, 3x4 grid of day cells) on a near-black rounded-square ground; one cell marked by a small red square crossed out with a grey x \u2014 implies a scheduling/calendar app emphasizing a cancelled, blocked, or unavailable day. same artwork used across all platforms/resolutions."
+    },
+    {
+      "label": "iOS Launch Image \u2014 Blank White Splash Screen",
+      "file_type": "image",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ios_launch_image",
+      "community": 32,
+      "norm_label": "ios launch image \u2014 blank white splash screen"
+    },
+    {
+      "label": "macOS App Icon \u2014 Flutter logo on white rounded-square (squircle) background",
+      "file_type": "image",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "macos_app_icon",
+      "community": 14,
+      "norm_label": "macos app icon \u2014 flutter logo on white rounded-square (squircle) background"
+    },
+    {
+      "label": "Web App Icon \u2014 Flutter logo (transparent background, standard and maskable variants)",
+      "file_type": "image",
+      "source_file": "web/icons/Icon-512.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "web_app_icon",
+      "community": 14,
+      "norm_label": "web app icon \u2014 flutter logo (transparent background, standard and maskable variants)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "android_app_src_main_java_io_flutter_plugins_generatedpluginregistrant_java",
+      "target": "plugins_generatedpluginregistrant_generatedpluginregistrant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "plugins_generatedpluginregistrant_generatedpluginregistrant",
+      "target": "plugins_generatedpluginregistrant_generatedpluginregistrant_registerwith",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "android/app/src/main/kotlin/com/example/mobilproje/MainActivity.kt",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "android_app_src_main_kotlin_com_example_mobilproje_mainactivity_kt",
+      "target": "mobilproje_mainactivity_mainactivity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "android/app/src/main/kotlin/com/example/mobilproje/MainActivity.kt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "mobilproje_mainactivity_mainactivity",
+      "target": "flutter_activity_flutteractivity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Flutter/flutter_export_environment.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ios_flutter_flutter_export_environment_sh",
+      "target": "volumes_ssd_t7_mobilproje_ios_flutter_flutter_export_environment_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "ios_flutter_ephemeral_flutter_lldb_helper_py",
+      "target": "ephemeral_flutter_lldb_helper_handle_new_rx_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "ios_flutter_ephemeral_flutter_lldb_helper_py",
+      "target": "ephemeral_flutter_lldb_helper_lldb_init_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "ephemeral_flutter_lldb_helper_rationale_8",
+      "target": "ephemeral_flutter_lldb_helper_handle_new_rx_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ios_runner_appdelegate_swift",
+      "target": "ios_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ios_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "target": "flutterappdelegate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ios_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "target": "flutterimplicitenginedelegate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "ios_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "target": "runner_appdelegate_appdelegate_application",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "ios_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "target": "runner_appdelegate_appdelegate_didinitializeimplicitflutterengine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "macos_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "target": "flutterappdelegate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "ios_runner_generatedpluginregistrant_m",
+      "target": "runner_generatedpluginregistrant_generatedpluginregistrant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "runner_generatedpluginregistrant_generatedpluginregistrant",
+      "target": "runner_generatedpluginregistrant_generatedpluginregistrant_registerwithregistry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_generatedpluginregistrant_generatedpluginregistrant",
+      "target": "runner_generatedpluginregistrant_registerwithregistry"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "ios/Runner/GeneratedPluginRegistrant.m",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_generatedpluginregistrant_generatedpluginregistrant",
+      "target": "flutter_generatedpluginregistrant_registergeneratedplugins"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/SceneDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ios_runner_scenedelegate_swift",
+      "target": "runner_scenedelegate_scenedelegate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/SceneDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "runner_scenedelegate_scenedelegate",
+      "target": "flutterscenedelegate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "ios_runner_assets_xcassets_appicon_appiconset_contents_json",
+      "target": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_images",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "ios_runner_assets_xcassets_appicon_appiconset_contents_json",
+      "target": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "target": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "target": "ios_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "ios_runner_assets_xcassets_launchimage_imageset_contents_json",
+      "target": "launchimage_imageset_contents_images",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "ios_runner_assets_xcassets_launchimage_imageset_contents_json",
+      "target": "launchimage_imageset_contents_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "launchimage_imageset_contents_info",
+      "target": "launchimage_imageset_contents_info_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "launchimage_imageset_contents_info",
+      "target": "launchimage_imageset_contents_info_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ios_runnertests_runnertests_swift",
+      "target": "ios_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ios_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "target": "xctestcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "ios_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "target": "ios_runnertests_runnertests_swift_runnertests_runnertests_runnertests_testexample",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "macos_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "target": "xctestcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_main_dart_devamsizliktakipapp"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_main_dart_main"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_main_dart_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_main_dart_materialapp"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "lib_main_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "package_timezone_data_latest_all_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "lib_main_dart_package_timezone_timezone_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "features_splash_screen_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "lib_main_dart_core_services_notification_service_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/models/course_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_models_course_model_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_core_models_course_model_dart_course"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_services_notification_service_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_notificationservice"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_services_notification_service_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_cancelall"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_services_notification_service_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_schedulenotification"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_services_notification_service_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_core_services_notification_service_dart_getdayname"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_services_notification_service_dart",
+      "target": "package_flutter_local_notifications_flutter_local_notifications_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_services_notification_service_dart",
+      "target": "lib_core_services_notification_service_dart_package_timezone_timezone_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_services_notification_service_dart",
+      "target": "models_course_model_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_homescreen"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_homescreenstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_initstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_gettodayname"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_markabsent"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildwelcomescreen"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_showbottommenu"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_padding"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_opacity"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildclickableindicator"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_gesturedetector"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_gotoaddcoursescreen"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildtodaypage"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_center"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildstandardcoursecard"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildallcoursespage"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_column"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_dismissible"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildcriticalpage"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_container"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_home_screen_dart_buildpremiumcriticalcard"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "lib_features_home_screen_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "dart_convert"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "lib_features_home_screen_dart_package_shared_preferences_shared_preferences_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "lib_features_home_screen_dart_core_models_course_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "schedule_add_course_screen_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "notifications_notification_screen_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_home_screen_dart",
+      "target": "lib_features_home_screen_dart_core_services_notification_service_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_splashscreen"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_splashscreenstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_initstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_dispose"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_row"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_text"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_splash_screen_dart_sizedbox"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "lib_features_splash_screen_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_splash_screen_dart",
+      "target": "home_screen_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_notificationscreen"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_notificationscreenstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_initstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_notifications_notification_screen_dart_sizedbox"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "lib_features_notifications_notification_screen_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "lib_features_notifications_notification_screen_dart_package_shared_preferences_shared_preferences_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "lib_features_notifications_notification_screen_dart_core_services_notification_service_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_notifications_notification_screen_dart",
+      "target": "lib_features_notifications_notification_screen_dart_core_models_course_model_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_addcoursescreen"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_addcoursescreenstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_savecourse"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_dispose"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_inkwell"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "volumes_ssd_t7_mobilproje_lib_features_schedule_add_course_screen_dart_buildcounterbutton"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "lib_features_schedule_add_course_screen_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_schedule_add_course_screen_dart",
+      "target": "lib_features_schedule_add_course_screen_dart_core_models_course_model_dart"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/flutter/generated_plugin_registrant.cc",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "linux_flutter_generated_plugin_registrant_cc",
+      "target": "linux_flutter_generated_plugin_registrant_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/flutter/generated_plugin_registrant.cc",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "linux_flutter_generated_plugin_registrant_cc",
+      "target": "flutter_generated_plugin_registrant_fl_register_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_my_application_my_application_activate",
+      "target": "flutter_generated_plugin_registrant_fl_register_plugins"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/main.cc",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "linux_runner_main_cc",
+      "target": "linux_runner_my_application_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/main.cc",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "linux_runner_main_cc",
+      "target": "runner_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "linux/runner/main.cc",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_main_main",
+      "target": "runner_my_application_my_application_new"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "linux/runner/main.cc",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_main_main",
+      "target": "runner_main_wwinmain"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "linux_runner_my_application_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_myapplication",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_first_frame_cb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_activate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_local_command_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_startup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_shutdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_dispose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_class_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "linux_runner_my_application_cc",
+      "target": "runner_my_application_my_application_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "source": "runner_my_application_myapplication",
+      "target": "runner_my_application_myapplication_parent_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "source": "runner_my_application_myapplication",
+      "target": "runner_my_application_myapplication_dart_entrypoint_arguments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_my_application_my_application_new",
+      "target": "runner_my_application_myapplication"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "linux/runner/my_application.cc",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_my_application_myapplication",
+      "target": "runner_win32_window_win32window"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Flutter/GeneratedPluginRegistrant.swift",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "macos_flutter_generatedpluginregistrant_swift",
+      "target": "flutter_generatedpluginregistrant_registergeneratedplugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "target": "flutter_generatedpluginregistrant_registergeneratedplugins"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_mainflutterwindow_awakefromnib",
+      "target": "flutter_generatedpluginregistrant_registergeneratedplugins"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Flutter/ephemeral/flutter_export_environment.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "macos_flutter_ephemeral_flutter_export_environment_sh",
+      "target": "volumes_ssd_t7_mobilproje_macos_flutter_ephemeral_flutter_export_environment_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "macos_runner_appdelegate_swift",
+      "target": "macos_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "macos_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "target": "runner_appdelegate_appdelegate_applicationshouldterminateafterlastwindowclosed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/AppDelegate.swift",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "macos_runner_appdelegate_swift_runner_appdelegate_appdelegate",
+      "target": "runner_appdelegate_appdelegate_applicationsupportssecurerestorablestate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "macos_runner_mainflutterwindow_swift",
+      "target": "runner_mainflutterwindow_mainflutterwindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "runner_mainflutterwindow_mainflutterwindow",
+      "target": "nswindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "runner_mainflutterwindow_mainflutterwindow",
+      "target": "runner_mainflutterwindow_mainflutterwindow_awakefromnib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "macos/Runner/MainFlutterWindow.swift",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_mainflutterwindow_mainflutterwindow",
+      "target": "runner_mainflutterwindow_awakefromnib"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "macos_runner_assets_xcassets_appicon_appiconset_contents_json",
+      "target": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_images",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "macos_runner_assets_xcassets_appicon_appiconset_contents_json",
+      "target": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "target": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info",
+      "target": "macos_runner_assets_xcassets_appicon_appiconset_contents_json_appicon_appiconset_contents_info_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "macos_runnertests_runnertests_swift",
+      "target": "macos_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "macos_runnertests_runnertests_swift_runnertests_runnertests_runnertests",
+      "target": "macos_runnertests_runnertests_swift_runnertests_runnertests_runnertests_testexample",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_short_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_start_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_display",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_background_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_theme_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_orientation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_prefer_related_applications",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/manifest.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "web_manifest_json",
+      "target": "web_manifest_icons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/flutter/generated_plugin_registrant.cc",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "windows_flutter_generated_plugin_registrant_cc",
+      "target": "windows_flutter_generated_plugin_registrant_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/flutter/generated_plugin_registrant.cc",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "windows_flutter_generated_plugin_registrant_cc",
+      "target": "flutter_generated_plugin_registrant_registerplugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "runner_flutter_window_oncreate",
+      "target": "flutter_generated_plugin_registrant_registerplugins"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_flutter_window_flutterwindow",
+      "target": "flutter_generated_plugin_registrant_registerplugins"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "windows_runner_flutter_window_cpp",
+      "target": "windows_runner_flutter_window_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "windows_runner_flutter_window_cpp",
+      "target": "windows_runner_flutter_window_cpp_runner_flutter_window_flutterwindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "windows_runner_flutter_window_cpp",
+      "target": "runner_flutter_window_oncreate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "windows_runner_flutter_window_cpp",
+      "target": "runner_flutter_window_ondestroy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "windows_runner_flutter_window_cpp",
+      "target": "runner_flutter_window_messagehandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "runner_flutter_window_oncreate",
+      "target": "runner_win32_window_getclientarea"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "windows/runner/flutter_window.cpp",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "runner_flutter_window_oncreate",
+      "target": "runner_win32_window_setchildcontent"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/flutter_window.h",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "windows_runner_flutter_window_h",
+      "target": "windows_runner_win32_window_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/flutter_window.h",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "windows_runner_flutter_window_h",
+      "target": "windows_runner_flutter_window_h_runner_flutter_window_flutterwindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/main.cpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "windows_runner_main_cpp",
+      "target": "windows_runner_flutter_window_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/main.cpp",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "windows_runner_main_cpp",
+      "target": "windows_runner_utils_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/main.cpp",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "windows_runner_main_cpp",
+      "target": "runner_main_wwinmain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "windows/runner/main.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_main_wwinmain",
+      "target": "runner_utils_createandattachconsole"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "windows/runner/main.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_main_wwinmain",
+      "target": "runner_utils_getcommandlinearguments"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "windows/runner/main.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_main_wwinmain",
+      "target": "runner_flutter_window_flutterwindow"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "windows_runner_resource_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "windows_runner_utils_cpp",
+      "target": "windows_runner_utils_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "windows_runner_utils_cpp",
+      "target": "runner_utils_createandattachconsole",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "windows_runner_utils_cpp",
+      "target": "runner_utils_getcommandlinearguments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "windows_runner_utils_cpp",
+      "target": "runner_utils_utf8fromutf16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/utils.cpp",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "runner_utils_getcommandlinearguments",
+      "target": "runner_utils_utf8fromutf16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "windows_runner_win32_window_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_scale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_enablefulldpisupportifavailable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_windowclassregistrar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_getwindowclass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_unregisterwindowclass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_win32window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_create",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_show",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_wndproc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_messagehandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_destroy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L236",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_getthisfromhandle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_setchildcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_getclientarea",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_gethandle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L262",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_setquitonclose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_oncreate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_ondestroy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L275",
+      "weight": 1.0,
+      "source": "windows_runner_win32_window_cpp",
+      "target": "runner_win32_window_updatetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "runner_win32_window_create",
+      "target": "runner_win32_window_scale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "runner_win32_window_wndproc",
+      "target": "runner_win32_window_enablefulldpisupportifavailable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "runner_win32_window_windowclassregistrar",
+      "target": "runner_win32_window_windowclassregistrar_windowclassregistrar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "runner_win32_window_windowclassregistrar",
+      "target": "runner_win32_window_windowclassregistrar_getinstance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L73",
+      "weight": 1.0,
+      "context": "field",
+      "source": "runner_win32_window_windowclassregistrar",
+      "target": "runner_win32_window_windowclassregistrar_getwindowclass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L77",
+      "weight": 1.0,
+      "context": "field",
+      "source": "runner_win32_window_windowclassregistrar",
+      "target": "runner_win32_window_windowclassregistrar_unregisterwindowclass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L82",
+      "weight": 1.0,
+      "context": "field",
+      "source": "runner_win32_window_windowclassregistrar",
+      "target": "runner_win32_window_windowclassregistrar_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L84",
+      "weight": 1.0,
+      "context": "field",
+      "source": "runner_win32_window_windowclassregistrar",
+      "target": "runner_win32_window_windowclassregistrar_class_registered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_win32_window_win32window",
+      "target": "runner_win32_window_windowclassregistrar"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "runner_win32_window_create",
+      "target": "runner_win32_window_windowclassregistrar_getinstance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L232",
+      "weight": 1.0,
+      "source": "runner_win32_window_destroy",
+      "target": "runner_win32_window_windowclassregistrar_getinstance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "runner_win32_window_create",
+      "target": "runner_win32_window_getwindowclass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L232",
+      "weight": 1.0,
+      "source": "runner_win32_window_destroy",
+      "target": "runner_win32_window_unregisterwindowclass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "runner_win32_window_win32window",
+      "target": "runner_win32_window_destroy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "windows/runner/flutter_window.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_flutter_window_flutterwindow",
+      "target": "runner_win32_window_win32window"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "runner_win32_window_create",
+      "target": "runner_win32_window_destroy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "runner_win32_window_create",
+      "target": "runner_win32_window_updatetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "runner_win32_window_create",
+      "target": "runner_win32_window_oncreate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "runner_win32_window_wndproc",
+      "target": "runner_win32_window_getthisfromhandle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "runner_win32_window_wndproc",
+      "target": "runner_win32_window_messagehandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "runner_win32_window_messagehandler",
+      "target": "runner_win32_window_destroy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "runner_win32_window_messagehandler",
+      "target": "runner_win32_window_getclientarea",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "runner_win32_window_messagehandler",
+      "target": "runner_win32_window_updatetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "runner_win32_window_destroy",
+      "target": "runner_win32_window_ondestroy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "windows/runner/win32_window.cpp",
+      "source_location": "L244",
+      "weight": 1.0,
+      "source": "runner_win32_window_setchildcontent",
+      "target": "runner_win32_window_getclientarea",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_main",
+      "target": "services_notification_service_initialize"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_main",
+      "target": "lib_main_devamsizliktakipapp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_devamsizliktakipapp",
+      "target": "features_splash_screen_splashscreen"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "services_notification_service_schedulecoursenotifications",
+      "target": "models_course_model_course"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_loaddata",
+      "target": "models_course_model_course"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "schedule_add_course_screen_savecourse",
+      "target": "models_course_model_course"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "notifications_notification_screen_notificationscreen",
+      "target": "models_course_model_course"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_homescreen",
+      "target": "models_course_model_course"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "services_notification_service_schedulecoursenotifications",
+      "target": "services_notification_service_cancelall"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "services_notification_service_schedulecoursenotifications",
+      "target": "services_notification_service_getdayname"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "services_notification_service_schedulecoursenotifications",
+      "target": "services_notification_service_schedulenotification"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_savecourses",
+      "target": "services_notification_service_schedulecoursenotifications"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "notifications_notification_screen_togglemorningreminder",
+      "target": "services_notification_service_schedulecoursenotifications"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "notifications_notification_screen_togglemorningreminder",
+      "target": "services_notification_service_requestpermission"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "notifications_notification_screen_togglemorningreminder",
+      "target": "services_notification_service_cancelall"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "lib/core/services/notification_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "services_notification_service_getdayname",
+      "target": "schedule_add_course_screen_addcoursescreen"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/splash_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_splash_screen_splashscreen",
+      "target": "features_home_screen_homescreen"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_homescreen",
+      "target": "notifications_notification_screen_notificationscreen"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_loaddata",
+      "target": "concept_shared_preferences_persistence"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_savecourses",
+      "target": "concept_shared_preferences_persistence"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_markabsent",
+      "target": "features_home_screen_savecourses"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_gotoaddcoursescreen",
+      "target": "features_home_screen_savecourses"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_savecourses",
+      "target": "concept_morning_reminder_flag"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/home_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_home_screen_gotoaddcoursescreen",
+      "target": "schedule_add_course_screen_addcoursescreen"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/notifications/notification_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "notifications_notification_screen_togglemorningreminder",
+      "target": "concept_morning_reminder_flag"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_appdelegate_appdelegate",
+      "target": "runner_appdelegate_didinitializeimplicitflutterengine"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "ios/RunnerTests/RunnerTests.swift",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runnertests_runnertests_runnertests",
+      "target": "runner_appdelegate_appdelegate"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_appdelegate_appdelegate",
+      "target": "runner_appdelegate_appdelegate_macos"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ios/Runner/AppDelegate.swift",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runner_appdelegate_didinitializeimplicitflutterengine",
+      "target": "runner_generatedpluginregistrant_registerwithregistry"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "macos/RunnerTests/RunnerTests.swift",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "runnertests_runnertests_runnertests_macos",
+      "target": "runner_appdelegate_appdelegate_macos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "android/app/build.gradle.kts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_build_gradle_android_build_config",
+      "target": "app_build_gradle_desugar_jdk_libs"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "android_launcher_icon",
+      "target": "app_icon_artwork"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ios_app_icon",
+      "target": "app_icon_artwork"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "assets/icon.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_icon_artwork",
+      "target": "app_icon_rationale"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "macos_app_icon",
+      "target": "app_icon_artwork"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "web/icons/Icon-512.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "web_app_icon",
+      "target": "app_icon_artwork"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "web/icons/Icon-512.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "web_app_icon",
+      "target": "macos_app_icon"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "notification_scheduling_flow",
+      "label": "Course notification scheduling flow",
+      "nodes": [
+        "notifications_notification_screen_togglemorningreminder",
+        "services_notification_service_schedulecoursenotifications",
+        "services_notification_service_schedulenotification",
+        "services_notification_service_cancelall",
+        "services_notification_service_getdayname"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/services/notification_service.dart"
+    },
+    {
+      "id": "course_persistence_lifecycle",
+      "label": "Course persistence and reschedule lifecycle",
+      "nodes": [
+        "features_home_screen_savecourses",
+        "features_home_screen_loaddata",
+        "concept_shared_preferences_persistence",
+        "models_course_model_course",
+        "services_notification_service_schedulecoursenotifications"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "lib/features/home_screen.dart"
+    },
+    {
+      "id": "course_creation_flow",
+      "label": "Course creation flow",
+      "nodes": [
+        "features_home_screen_gotoaddcoursescreen",
+        "schedule_add_course_screen_addcoursescreen",
+        "schedule_add_course_screen_savecourse",
+        "models_course_model_course"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/schedule/add_course_screen.dart"
+    },
+    {
+      "id": "flutter_plugin_registration_flow",
+      "label": "Flutter plugin registration bootstrap across platforms",
+      "nodes": [
+        "runner_appdelegate_didinitializeimplicitflutterengine",
+        "runner_generatedpluginregistrant_registerwithregistry",
+        "flutter_generatedpluginregistrant_registergeneratedplugins"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "ios/Runner/AppDelegate.swift"
+    },
+    {
+      "id": "plugin_registration_pattern",
+      "label": "Cross-platform Plugin Registration",
+      "nodes": [
+        "plugins_generatedpluginregistrant_generatedpluginregistrant",
+        "flutter_generated_plugin_registrant_fl_register_plugins",
+        "flutter_generated_plugin_registrant_registerplugins"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "linux/flutter/generated_plugin_registrant.cc"
+    },
+    {
+      "id": "native_window_bootstrap",
+      "label": "Native App Bootstrap Entry Points",
+      "nodes": [
+        "runner_main_main",
+        "runner_main_wwinmain",
+        "runner_my_application_myapplication",
+        "runner_flutter_window_flutterwindow"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "windows/runner/main.cpp"
+    },
+    {
+      "id": "app_branding_icon_set",
+      "label": "App Branding Icon Set (all platform/resolution variants)",
+      "nodes": [
+        "app_icon_artwork",
+        "android_launcher_icon",
+        "ios_app_icon"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "assets/icon.png"
+    },
+    {
+      "id": "app_branding",
+      "label": "App Branding \u2014 platform icons and launch imagery",
+      "nodes": [
+        "macos_app_icon",
+        "web_app_icon",
+        "app_icon_artwork",
+        "ios_launch_image"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+    }
+  ]
+}

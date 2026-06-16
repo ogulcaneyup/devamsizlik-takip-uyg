@@ -1,0 +1,492 @@
+{
+  "/Volumes/SSD T7/mobilproje/android/build.gradle.kts": {
+    "mtime": 1777819818.0,
+    "ast_hash": "803fe22651fbe96ed401eb0b66a492d1",
+    "semantic_hash": "803fe22651fbe96ed401eb0b66a492d1"
+  },
+  "/Volumes/SSD T7/mobilproje/android/gradlew": {
+    "mtime": 1777819820.0,
+    "ast_hash": "7f1cd7eb3f75a1dc85cd37753972a6e2",
+    "semantic_hash": "7f1cd7eb3f75a1dc85cd37753972a6e2"
+  },
+  "/Volumes/SSD T7/mobilproje/android/settings.gradle.kts": {
+    "mtime": 1777819818.0,
+    "ast_hash": "f276a44edd917afd836899357fdae60e",
+    "semantic_hash": "f276a44edd917afd836899357fdae60e"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/build.gradle.kts": {
+    "mtime": 1780300336.0,
+    "ast_hash": "feefa3c51f4ffbe4a8ec02ba030f6cf8",
+    "semantic_hash": "feefa3c51f4ffbe4a8ec02ba030f6cf8"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java": {
+    "mtime": 1780417072.0,
+    "ast_hash": "b5564d70aed686d5216f17ef6a35d48f",
+    "semantic_hash": "b5564d70aed686d5216f17ef6a35d48f"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/src/main/kotlin/com/example/mobilproje/MainActivity.kt": {
+    "mtime": 1777819818.0,
+    "ast_hash": "4a4893a5d67a114464f3f963940f6e3a",
+    "semantic_hash": "4a4893a5d67a114464f3f963940f6e3a"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Flutter/flutter_export_environment.sh": {
+    "mtime": 1780417096.0,
+    "ast_hash": "00fcfaa5bb77ffa54bd4a36bc8d2000b",
+    "semantic_hash": "00fcfaa5bb77ffa54bd4a36bc8d2000b"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Flutter/ephemeral/flutter_lldb_helper.py": {
+    "mtime": 1780417096.0,
+    "ast_hash": "98fc75412162af387e2e3461e4e58094",
+    "semantic_hash": "98fc75412162af387e2e3461e4e58094"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/AppDelegate.swift": {
+    "mtime": 1776363504.0,
+    "ast_hash": "9e1de9c329a3fe4931876063de95132b",
+    "semantic_hash": "9e1de9c329a3fe4931876063de95132b"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/GeneratedPluginRegistrant.h": {
+    "mtime": 1777819828.0,
+    "ast_hash": "decb9041b5e91a07e66f4664e5dac408",
+    "semantic_hash": "decb9041b5e91a07e66f4664e5dac408"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/GeneratedPluginRegistrant.m": {
+    "mtime": 1780417072.0,
+    "ast_hash": "5fd215b352b203b5b8a064afa326695c",
+    "semantic_hash": "5fd215b352b203b5b8a064afa326695c"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Runner-Bridging-Header.h": {
+    "mtime": 1776363504.0,
+    "ast_hash": "7ad7b5cea096132de13ba526b2b9efbe",
+    "semantic_hash": "7ad7b5cea096132de13ba526b2b9efbe"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/SceneDelegate.swift": {
+    "mtime": 1776363504.0,
+    "ast_hash": "0c3e86af131f6a9e547c80b5ed058914",
+    "semantic_hash": "0c3e86af131f6a9e547c80b5ed058914"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json": {
+    "mtime": 1776363504.0,
+    "ast_hash": "31a08e429403e265cabfb31b3d65f049",
+    "semantic_hash": "31a08e429403e265cabfb31b3d65f049"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json": {
+    "mtime": 1776363504.0,
+    "ast_hash": "b9e927ac17345f2d5f052fe68a3487f9",
+    "semantic_hash": "b9e927ac17345f2d5f052fe68a3487f9"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/RunnerTests/RunnerTests.swift": {
+    "mtime": 1777819820.0,
+    "ast_hash": "24e5d095048eb86c30423f4e04b6e57b",
+    "semantic_hash": "24e5d095048eb86c30423f4e04b6e57b"
+  },
+  "/Volumes/SSD T7/mobilproje/lib/main.dart": {
+    "mtime": 1780342968.0,
+    "ast_hash": "5db2e7049ed518fcf2647bb614e69e55",
+    "semantic_hash": "5db2e7049ed518fcf2647bb614e69e55"
+  },
+  "/Volumes/SSD T7/mobilproje/lib/core/models/course_model.dart": {
+    "mtime": 1779357684.0,
+    "ast_hash": "ee6bd51c9ea5be407d832050ff0e0368",
+    "semantic_hash": "ee6bd51c9ea5be407d832050ff0e0368"
+  },
+  "/Volumes/SSD T7/mobilproje/lib/core/services/notification_service.dart": {
+    "mtime": 1780344564.0,
+    "ast_hash": "61b8116cec3ebbb49cdffcde1ecb519b",
+    "semantic_hash": "61b8116cec3ebbb49cdffcde1ecb519b"
+  },
+  "/Volumes/SSD T7/mobilproje/lib/features/home_screen.dart": {
+    "mtime": 1780297938.0,
+    "ast_hash": "bebdc169eb4bceff0ca472e3f53f2d14",
+    "semantic_hash": "bebdc169eb4bceff0ca472e3f53f2d14"
+  },
+  "/Volumes/SSD T7/mobilproje/lib/features/splash_screen.dart": {
+    "mtime": 1780414628.0,
+    "ast_hash": "1abae00185cbc17bc6b79de483452c62",
+    "semantic_hash": "1abae00185cbc17bc6b79de483452c62"
+  },
+  "/Volumes/SSD T7/mobilproje/lib/features/notifications/notification_screen.dart": {
+    "mtime": 1780344606.0,
+    "ast_hash": "e1463edc11044652f02b94174976fb13",
+    "semantic_hash": "e1463edc11044652f02b94174976fb13"
+  },
+  "/Volumes/SSD T7/mobilproje/lib/features/schedule/add_course_screen.dart": {
+    "mtime": 1779965624.0,
+    "ast_hash": "446b55d38b7b1c531e86d8502575c790",
+    "semantic_hash": "446b55d38b7b1c531e86d8502575c790"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/flutter/generated_plugin_registrant.cc": {
+    "mtime": 1778420550.0,
+    "ast_hash": "399ad1d69aa4ba27ae90eb088bbc155c",
+    "semantic_hash": "399ad1d69aa4ba27ae90eb088bbc155c"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/flutter/generated_plugin_registrant.h": {
+    "mtime": 1777819828.0,
+    "ast_hash": "d295462c9da9f7fef22dc86c34492318",
+    "semantic_hash": "d295462c9da9f7fef22dc86c34492318"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/runner/main.cc": {
+    "mtime": 1776363504.0,
+    "ast_hash": "539395bcd63dba20afed0838d136189f",
+    "semantic_hash": "539395bcd63dba20afed0838d136189f"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/runner/my_application.cc": {
+    "mtime": 1777819820.0,
+    "ast_hash": "7ec3b03c7653156784de8d8d8d82a6a0",
+    "semantic_hash": "7ec3b03c7653156784de8d8d8d82a6a0"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/runner/my_application.h": {
+    "mtime": 1776363504.0,
+    "ast_hash": "ffa1a7c0a2ad45a2c14a921596516ff8",
+    "semantic_hash": "ffa1a7c0a2ad45a2c14a921596516ff8"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Flutter/GeneratedPluginRegistrant.swift": {
+    "mtime": 1780297432.0,
+    "ast_hash": "691e6b6536555b1696a657e3310f1839",
+    "semantic_hash": "691e6b6536555b1696a657e3310f1839"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Flutter/ephemeral/flutter_export_environment.sh": {
+    "mtime": 1780417096.0,
+    "ast_hash": "330857ff61759baca464229c9306da1d",
+    "semantic_hash": "330857ff61759baca464229c9306da1d"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/AppDelegate.swift": {
+    "mtime": 1776363504.0,
+    "ast_hash": "4b52e0b89ebfef9baf45b04548c463d6",
+    "semantic_hash": "4b52e0b89ebfef9baf45b04548c463d6"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/MainFlutterWindow.swift": {
+    "mtime": 1776363504.0,
+    "ast_hash": "93c22dae2d93f3dc1402e121901f582b",
+    "semantic_hash": "93c22dae2d93f3dc1402e121901f582b"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json": {
+    "mtime": 1776363504.0,
+    "ast_hash": "1d48e925145d4b573a3b5d7960a1c585",
+    "semantic_hash": "1d48e925145d4b573a3b5d7960a1c585"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/RunnerTests/RunnerTests.swift": {
+    "mtime": 1777819820.0,
+    "ast_hash": "8059f5d27a19c556eeafb49b3f9b7bdd",
+    "semantic_hash": "8059f5d27a19c556eeafb49b3f9b7bdd"
+  },
+  "/Volumes/SSD T7/mobilproje/web/manifest.json": {
+    "mtime": 1777819820.0,
+    "ast_hash": "e9160033050f3a1fbfb140bbe478ba61",
+    "semantic_hash": "e9160033050f3a1fbfb140bbe478ba61"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/flutter/generated_plugin_registrant.cc": {
+    "mtime": 1778420550.0,
+    "ast_hash": "2babb9c9335a66f5f7b42bbe96eeead8",
+    "semantic_hash": "2babb9c9335a66f5f7b42bbe96eeead8"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/flutter/generated_plugin_registrant.h": {
+    "mtime": 1777819828.0,
+    "ast_hash": "0ea33875f9f8e118f9c2ded03e2e2835",
+    "semantic_hash": "0ea33875f9f8e118f9c2ded03e2e2835"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/flutter_window.cpp": {
+    "mtime": 1776363504.0,
+    "ast_hash": "2f463f9b7da67a2d692a012f9ea85e0c",
+    "semantic_hash": "2f463f9b7da67a2d692a012f9ea85e0c"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/flutter_window.h": {
+    "mtime": 1776363504.0,
+    "ast_hash": "7defcc89d4a26d56e801241d624d48fb",
+    "semantic_hash": "7defcc89d4a26d56e801241d624d48fb"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/main.cpp": {
+    "mtime": 1777819820.0,
+    "ast_hash": "9b6bd2362f9aabbc02bb6bc5748aabda",
+    "semantic_hash": "9b6bd2362f9aabbc02bb6bc5748aabda"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/resource.h": {
+    "mtime": 1776363504.0,
+    "ast_hash": "1ade5dd15e613479a15e8832ed276f2b",
+    "semantic_hash": "1ade5dd15e613479a15e8832ed276f2b"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/utils.cpp": {
+    "mtime": 1776363504.0,
+    "ast_hash": "432461b09d862a2f8dadf380ff0e34e5",
+    "semantic_hash": "432461b09d862a2f8dadf380ff0e34e5"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/utils.h": {
+    "mtime": 1776363504.0,
+    "ast_hash": "fd81e143f5614eb6fd75efe539002853",
+    "semantic_hash": "fd81e143f5614eb6fd75efe539002853"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/win32_window.cpp": {
+    "mtime": 1776363504.0,
+    "ast_hash": "571eb8234dbc2661be03aa5f2a4d2fca",
+    "semantic_hash": "571eb8234dbc2661be03aa5f2a4d2fca"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/win32_window.h": {
+    "mtime": 1776363504.0,
+    "ast_hash": "7569387d58711ab975940f4df3b4bcda",
+    "semantic_hash": "7569387d58711ab975940f4df3b4bcda"
+  },
+  "/Volumes/SSD T7/mobilproje/analysis_options.yaml": {
+    "mtime": 1777819818.0,
+    "ast_hash": "9e65f4b9beebb674c0dc252f70a5c177",
+    "semantic_hash": "9e65f4b9beebb674c0dc252f70a5c177"
+  },
+  "/Volumes/SSD T7/mobilproje/pubspec.yaml": {
+    "mtime": 1780417074.0,
+    "ast_hash": "566f3736c7a9829209d519933cfb4b79",
+    "semantic_hash": "566f3736c7a9829209d519933cfb4b79"
+  },
+  "/Volumes/SSD T7/mobilproje/README.md": {
+    "mtime": 1777819820.0,
+    "ast_hash": "364ad1e424f9f2b5adca104bdee016ec",
+    "semantic_hash": "364ad1e424f9f2b5adca104bdee016ec"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": {
+    "mtime": 1776363504.0,
+    "ast_hash": "f7ee1b402881509d197f34963e569927",
+    "semantic_hash": "f7ee1b402881509d197f34963e569927"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/CMakeLists.txt": {
+    "mtime": 1777819820.0,
+    "ast_hash": "4c266417a9146c9994fbd25028bacc38",
+    "semantic_hash": "4c266417a9146c9994fbd25028bacc38"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/flutter/CMakeLists.txt": {
+    "mtime": 1776363504.0,
+    "ast_hash": "2195470ce31675d31db5a37590d011f6",
+    "semantic_hash": "2195470ce31675d31db5a37590d011f6"
+  },
+  "/Volumes/SSD T7/mobilproje/linux/runner/CMakeLists.txt": {
+    "mtime": 1776363504.0,
+    "ast_hash": "30cc1614b16214b66c014af09ba699eb",
+    "semantic_hash": "30cc1614b16214b66c014af09ba699eb"
+  },
+  "/Volumes/SSD T7/mobilproje/web/index.html": {
+    "mtime": 1777819820.0,
+    "ast_hash": "1aa7a0488b5ae3f5095c33c05da308be",
+    "semantic_hash": "1aa7a0488b5ae3f5095c33c05da308be"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/CMakeLists.txt": {
+    "mtime": 1777819820.0,
+    "ast_hash": "33fad0ae958c996c6f153df0c5b062bc",
+    "semantic_hash": "33fad0ae958c996c6f153df0c5b062bc"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/flutter/CMakeLists.txt": {
+    "mtime": 1776363504.0,
+    "ast_hash": "bbf66fed5180bd9ae8198b8d7c4a0001",
+    "semantic_hash": "bbf66fed5180bd9ae8198b8d7c4a0001"
+  },
+  "/Volumes/SSD T7/mobilproje/windows/runner/CMakeLists.txt": {
+    "mtime": 1776363504.0,
+    "ast_hash": "028602ab9754bffe716659ada7590d29",
+    "semantic_hash": "028602ab9754bffe716659ada7590d29"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/src/main/res/mipmap-hdpi/ic_launcher.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "c81d97b8161d8b221282392611a16837",
+    "semantic_hash": "c81d97b8161d8b221282392611a16837"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/src/main/res/mipmap-mdpi/ic_launcher.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "9bf068de5b7835ea03112a729612bfbf",
+    "semantic_hash": "9bf068de5b7835ea03112a729612bfbf"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "4b67553aa302db2d692427331d0c38a0",
+    "semantic_hash": "4b67553aa302db2d692427331d0c38a0"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "b96761c9fc0487faea5f2c327ad01fb2",
+    "semantic_hash": "b96761c9fc0487faea5f2c327ad01fb2"
+  },
+  "/Volumes/SSD T7/mobilproje/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "d31d5f463ce0d847bb4f5caf51400487",
+    "semantic_hash": "d31d5f463ce0d847bb4f5caf51400487"
+  },
+  "/Volumes/SSD T7/mobilproje/assets/icon.png": {
+    "mtime": 1780412862.0,
+    "ast_hash": "2f114122caae0747b7639a6711d31f0f",
+    "semantic_hash": "2f114122caae0747b7639a6711d31f0f"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "8220b43ddba50d58ecb6fe0205b2dfa6",
+    "semantic_hash": "8220b43ddba50d58ecb6fe0205b2dfa6"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "b3ad94b7ccd41b1ef13cdcec0893138c",
+    "semantic_hash": "b3ad94b7ccd41b1ef13cdcec0893138c"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "33469ed51cf1ec6fef89b3896ead21bc",
+    "semantic_hash": "33469ed51cf1ec6fef89b3896ead21bc"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "86dd22c3b303f18e075ace4095de91c0",
+    "semantic_hash": "86dd22c3b303f18e075ace4095de91c0"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "4b2155b984921ba6d86d050216ac5444",
+    "semantic_hash": "4b2155b984921ba6d86d050216ac5444"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "6774f8b915eaf97fe1b7dee2b264f6a5",
+    "semantic_hash": "6774f8b915eaf97fe1b7dee2b264f6a5"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "deb37233da981b39a3b671d373a9dea0",
+    "semantic_hash": "deb37233da981b39a3b671d373a9dea0"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "33469ed51cf1ec6fef89b3896ead21bc",
+    "semantic_hash": "33469ed51cf1ec6fef89b3896ead21bc"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "8dd9df94531aba3ceeb2a0e55077a609",
+    "semantic_hash": "8dd9df94531aba3ceeb2a0e55077a609"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "1e3fa645412ed5c8689c3dec89cefc93",
+    "semantic_hash": "1e3fa645412ed5c8689c3dec89cefc93"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "ecb8297bf2ca27d291ed0595c150f632",
+    "semantic_hash": "ecb8297bf2ca27d291ed0595c150f632"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "fac90951d5471c2a4215df32aef3a006",
+    "semantic_hash": "fac90951d5471c2a4215df32aef3a006"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "adc6f4bdb07c2d8baf7c23a625e2a3f1",
+    "semantic_hash": "adc6f4bdb07c2d8baf7c23a625e2a3f1"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "9aa91fa9a0a342d461462c8dcd7e4448",
+    "semantic_hash": "9aa91fa9a0a342d461462c8dcd7e4448"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "1e3fa645412ed5c8689c3dec89cefc93",
+    "semantic_hash": "1e3fa645412ed5c8689c3dec89cefc93"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "dd7fadc9637c4506be985e03dae95891",
+    "semantic_hash": "dd7fadc9637c4506be985e03dae95891"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "c81d97b8161d8b221282392611a16837",
+    "semantic_hash": "c81d97b8161d8b221282392611a16837"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "b96761c9fc0487faea5f2c327ad01fb2",
+    "semantic_hash": "b96761c9fc0487faea5f2c327ad01fb2"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "5e500177d76a506f04e25fe615aaa261",
+    "semantic_hash": "5e500177d76a506f04e25fe615aaa261"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "8bb8bd361dc37c56c2bed107e1eecefe",
+    "semantic_hash": "8bb8bd361dc37c56c2bed107e1eecefe"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png": {
+    "mtime": 1780412946.0,
+    "ast_hash": "cc5fcb0be3f5d71e04951a80ce91d625",
+    "semantic_hash": "cc5fcb0be3f5d71e04951a80ce91d625"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "978c1bee49d7ad5fc1a4d81099b13e18",
+    "semantic_hash": "978c1bee49d7ad5fc1a4d81099b13e18"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "978c1bee49d7ad5fc1a4d81099b13e18",
+    "semantic_hash": "978c1bee49d7ad5fc1a4d81099b13e18"
+  },
+  "/Volumes/SSD T7/mobilproje/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "978c1bee49d7ad5fc1a4d81099b13e18",
+    "semantic_hash": "978c1bee49d7ad5fc1a4d81099b13e18"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "c9becc9105f8cabce934d20c7bfb6aac",
+    "semantic_hash": "c9becc9105f8cabce934d20c7bfb6aac"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "3ded30823804caaa5ccc944067c54a36",
+    "semantic_hash": "3ded30823804caaa5ccc944067c54a36"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "8bf511604bc6ed0a6aeb380c5113fdcf",
+    "semantic_hash": "8bf511604bc6ed0a6aeb380c5113fdcf"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "dfe2c93d1536ae02f085cc63faa3430e",
+    "semantic_hash": "dfe2c93d1536ae02f085cc63faa3430e"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "8e0ae58e362a6636bdfccbc04da2c58c",
+    "semantic_hash": "8e0ae58e362a6636bdfccbc04da2c58c"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "0ad44039155424738917502c69667699",
+    "semantic_hash": "0ad44039155424738917502c69667699"
+  },
+  "/Volumes/SSD T7/mobilproje/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "04e7b6ef05346c70b663ca1d97de3ad5",
+    "semantic_hash": "04e7b6ef05346c70b663ca1d97de3ad5"
+  },
+  "/Volumes/SSD T7/mobilproje/web/favicon.png": {
+    "mtime": 1776363504.0,
+    "ast_hash": "5dcef449791fa27946b3d35ad8803796",
+    "semantic_hash": "5dcef449791fa27946b3d35ad8803796"
+  },
+  "/Volumes/SSD T7/mobilproje/web/icons/Icon-192.png": {
+    "mtime": 1776363504.0,
+    "ast_hash": "ac9a721a12bbc803b44f645561ecb1e1",
+    "semantic_hash": "ac9a721a12bbc803b44f645561ecb1e1"
+  },
+  "/Volumes/SSD T7/mobilproje/web/icons/Icon-512.png": {
+    "mtime": 1776363504.0,
+    "ast_hash": "96e752610906ba2a93c65f8abe1645f1",
+    "semantic_hash": "96e752610906ba2a93c65f8abe1645f1"
+  },
+  "/Volumes/SSD T7/mobilproje/web/icons/Icon-maskable-192.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "c457ef57daa1d16f64b27b786ec2ea3c",
+    "semantic_hash": "c457ef57daa1d16f64b27b786ec2ea3c"
+  },
+  "/Volumes/SSD T7/mobilproje/web/icons/Icon-maskable-512.png": {
+    "mtime": 1776886060.0,
+    "ast_hash": "301a7604d45b3e739efc881eb04896ea",
+    "semantic_hash": "301a7604d45b3e739efc881eb04896ea"
+  }
+}

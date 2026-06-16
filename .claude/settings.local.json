@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($f = \"C:\\\\Users\\\\ASUS\\\\Desktop\\\\Python Codes\\\\mobilproje\\\\lib\\\\features\\\\settings\\\\settings_screen.dart\"; $c = [System.IO.File]::ReadAllText\\($f\\); $c = $c.Replace\\(\"activeColor: kVibrantRed,\", \"activeThumbColor: kVibrantRed,\"\\); $c = $c.Replace\\(\"if \\(trailing != null\\) trailing,\", \"?trailing,\"\\); [System.IO.File]::WriteAllText\\($f, $c\\))",
+      "PowerShell(flutter analyze *)",
+      "PowerShell($f = \"C:\\\\Users\\\\ASUS\\\\Desktop\\\\Python Codes\\\\mobilproje\\\\lib\\\\features\\\\home_screen.dart\"; $c = [System.IO.File]::ReadAllText\\($f\\); $c = $c.Replace\\(\"        c = Colors.green;`r`n        label = `\"BUGÜN: GELDİM`\";\", \"        c = const Color\\(0xFF2ED573\\);`r`n        label = `\"BUGÜN: GELDİM`\";\"\\); [System.IO.File]::WriteAllText\\($f, $c\\))",
+      "PowerShell(New-Item *)",
+      "PowerShell(Copy-Item *)",
+      "PowerShell(flutter *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter analyze *)"
+    ]
+  }
+}
