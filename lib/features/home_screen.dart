@@ -6,7 +6,6 @@ import '../core/models/exam_model.dart';
 import '../core/models/profile_model.dart';
 import '../core/models/term.dart';
 import '../core/services/storage_service.dart';
-import '../core/services/notification_service.dart';
 import '../core/theme/app_theme.dart';
 import 'schedule/add_course_screen.dart';
 import 'settings/settings_screen.dart';
@@ -44,12 +43,23 @@ class _HomeScreenState extends State<HomeScreen>
     _pulseController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1600),
-    )..repeat(reverse: true);
+    );
     _waveController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 14),
-    )..repeat();
+    );
     _loadData();
+  }
+
+  void _syncControllers() {
+    final empty = _termCourses.isEmpty;
+    if (empty && !_pulseController.isAnimating) {
+      _pulseController.repeat(reverse: true);
+      _waveController.repeat();
+    } else if (!empty && _pulseController.isAnimating) {
+      _pulseController.stop();
+      _waveController.stop();
+    }
   }
 
   @override
@@ -82,29 +92,13 @@ class _HomeScreenState extends State<HomeScreen>
       _profile = profile;
       _isDataLoaded = true;
     });
+    _syncControllers();
 
-    // Temizlenmiş verileri kaydet
     await StorageService.saveCourses(courses);
-
-    // Bildirim sistemini başlat (izin var mı kontrol et)
-    final reminderOn = await StorageService.getMorningReminder();
-    if (reminderOn) {
-      await NotificationService.scheduleCourseNotifications(
-        courses,
-        activeTermId: term.id,
-      );
-    }
   }
 
   Future<void> _persist() async {
     await StorageService.saveCourses(_allCourses);
-    final reminderOn = await StorageService.getMorningReminder();
-    if (reminderOn) {
-      await NotificationService.scheduleCourseNotifications(
-        _allCourses,
-        activeTermId: _activeTerm.id,
-      );
-    }
   }
 
   String _getTodayName() {
@@ -120,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen>
     return days[DateTime.now().weekday - 1];
   }
 
-  // ---------- YOKLAMA (günde tek işaret) ----------
+  //YOKLAMA (günde tek işaret)
 
   void _markToday(Course course, String status) {
     if (course.markFor(DateTime.now()) != null) return; // gün kilitli
@@ -145,30 +139,13 @@ class _HomeScreenState extends State<HomeScreen>
     _persist();
   }
 
-  // ---------- DERS EYLEMLERİ ----------
-
-  void _toggleMute(Course course) {
-    setState(() {
-      course.notificationMuted = !course.notificationMuted;
-    });
-    _persist();
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          course.notificationMuted
-              ? "${course.name} bildirimleri susturuldu."
-              : "${course.name} bildirimleri açıldı.",
-        ),
-      ),
-    );
-  }
+  //DERS EYLEMLERİ
 
   void _deleteCourse(Course course) {
     setState(() {
-      // Yeni liste referansı: takvim noktaları anında güncellensin.
       _allCourses = _allCourses.where((c) => c.id != course.id).toList();
     });
+    _syncControllers();
     _persist();
   }
 
@@ -226,14 +203,14 @@ class _HomeScreenState extends State<HomeScreen>
     final result = await Navigator.push(context, _courseRoute());
     if (result != null) {
       setState(() {
-        // Yeni liste referansı: takvim noktaları anında güncellensin.
         _allCourses = [..._allCourses, result];
       });
+      _syncControllers();
       _persist();
     }
   }
 
-  // ---------- SINAV EYLEMLERİ ----------
+  // SINAV EYLEMLERİ
 
   Future<void> _openExamAdd() async {
     final result = await Navigator.push(
@@ -340,7 +317,7 @@ class _HomeScreenState extends State<HomeScreen>
                   key: const ValueKey('main'),
                   child: Column(
                     children: [
-                      _buildTopBar(textColor, bgColor),
+                      _buildTopBar(textColor),
                       _buildTabs(textColor),
                       Expanded(
                         child: PageView(
@@ -378,7 +355,7 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  Widget _buildTopBar(Color textColor, Color bgColor) {
+  Widget _buildTopBar(Color textColor) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 8, 12, 4),
       child: Row(
@@ -422,7 +399,6 @@ class _HomeScreenState extends State<HomeScreen>
           _topIconButton(
             Icons.settings_outlined,
             textColor,
-            bgColor,
             onTap: _openSettings,
           ),
           const SizedBox(width: 8),
@@ -453,8 +429,7 @@ class _HomeScreenState extends State<HomeScreen>
 
   Widget _topIconButton(
     IconData icon,
-    Color textColor,
-    Color bgColor, {
+    Color textColor, {
     required VoidCallback onTap,
   }) {
     return InkWell(
@@ -579,7 +554,7 @@ class _HomeScreenState extends State<HomeScreen>
         const SizedBox(height: 10),
         Center(
           child: Text(
-            "Kartı sola kaydır: sustur · düzenle · sil",
+            "Kartı sola kaydır: düzenle · sil",
             style: TextStyle(
               color: textColor.withValues(alpha: 0.3),
               fontSize: 11,
@@ -630,16 +605,8 @@ class _HomeScreenState extends State<HomeScreen>
       key: ValueKey(course.id + (showActions ? '_t' : '_a')),
       endActionPane: ActionPane(
         motion: const BehindMotion(),
-        extentRatio: 0.66,
+        extentRatio: 0.5,
         children: [
-          _slideAction(
-            color: const Color(0xFFFF9800),
-            icon: course.notificationMuted
-                ? Icons.notifications_off_outlined
-                : Icons.notifications_active_outlined,
-            label: course.notificationMuted ? 'Aç' : 'Sustur',
-            onTap: () => _toggleMute(course),
-          ),
           _slideAction(
             color: const Color(0xFF00BCD4),
             icon: Icons.edit_outlined,
@@ -695,28 +662,14 @@ class _HomeScreenState extends State<HomeScreen>
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Flexible(
-                      child: Text(
-                        course.name,
-                        style: TextStyle(
-                          color: textColor,
-                          fontSize: 14.5,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0.2,
-                        ),
-                      ),
-                    ),
-                    if (course.notificationMuted) ...[
-                      const SizedBox(width: 6),
-                      Icon(
-                        Icons.notifications_off,
-                        size: 13,
-                        color: textColor.withValues(alpha: 0.4),
-                      ),
-                    ],
-                  ],
+                Text(
+                  course.name,
+                  style: TextStyle(
+                    color: textColor,
+                    fontSize: 14.5,
+                    fontWeight: FontWeight.w500,
+                    letterSpacing: 0.2,
+                  ),
                 ),
                 const SizedBox(height: 3),
                 Text(
@@ -836,28 +789,14 @@ class _HomeScreenState extends State<HomeScreen>
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        Flexible(
-                          child: Text(
-                            course.name,
-                            style: TextStyle(
-                              color: textColor,
-                              fontSize: 15.5,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 0.2,
-                            ),
-                          ),
-                        ),
-                        if (course.notificationMuted) ...[
-                          const SizedBox(width: 8),
-                          Icon(
-                            Icons.notifications_off,
-                            size: 14,
-                            color: textColor.withValues(alpha: 0.4),
-                          ),
-                        ],
-                      ],
+                    Text(
+                      course.name,
+                      style: TextStyle(
+                        color: textColor,
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.2,
+                      ),
                     ),
                     const SizedBox(height: 5),
                     Text(

@@ -62,7 +62,7 @@ class _ExamCalendarScreenState extends State<ExamCalendarScreen>
 
     return Column(
       children: [
-        _examHeader("Sınav Takvimi", Icons.assignment_outlined, textColor),
+        _examHeader("Sınav Takvimi", textColor),
         _buildTabButtons(textColor),
         Expanded(
           child: AnimatedSwitcher(
@@ -83,7 +83,7 @@ class _ExamCalendarScreenState extends State<ExamCalendarScreen>
   }
 
   /// Sayfa başlığı: ad + ince kırmızı vurgu + dönem rozeti.
-  Widget _examHeader(String title, IconData icon, Color textColor) {
+  Widget _examHeader(String title, Color textColor) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 6, 20, 12),
       child: Row(

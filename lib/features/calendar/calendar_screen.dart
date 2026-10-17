@@ -100,7 +100,7 @@ class _CalendarScreenState extends State<CalendarScreen>
 
     return Column(
       children: [
-        _calendarHeader("Ders Takvimi", Icons.event_note_outlined, textColor),
+        _calendarHeader("Ders Takvimi", textColor),
         _calendarCard(
           context,
           textColor,
@@ -238,7 +238,7 @@ class _CalendarScreenState extends State<CalendarScreen>
   }
 
   /// Sayfa başlığı: ad + altında ince kırmızı vurgu + dönem rozeti.
-  Widget _calendarHeader(String title, IconData icon, Color textColor) {
+  Widget _calendarHeader(String title, Color textColor) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 6, 20, 12),
       child: Row(

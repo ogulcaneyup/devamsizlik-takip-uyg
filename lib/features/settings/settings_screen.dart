@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../core/services/notification_service.dart';
 import '../../core/services/storage_service.dart';
 import '../../core/models/term.dart';
 import '../../core/theme/app_theme.dart';
@@ -12,7 +11,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  bool _isMorningReminderActive = false;
   Term _activeTerm = Term.current();
   bool _termChanged = false;
 
@@ -23,32 +21,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   Future<void> _loadSettings() async {
-    final reminder = await StorageService.getMorningReminder();
     final term = await StorageService.getActiveTerm();
     if (!mounted) return;
     setState(() {
-      _isMorningReminderActive = reminder;
       _activeTerm = term;
     });
-  }
-
-  Future<void> _toggleMorningReminder(bool value) async {
-    if (value) {
-      await NotificationService.requestPermission();
-      final courses = await StorageService.loadCourses();
-      await NotificationService.scheduleCourseNotifications(courses, activeTermId: _activeTerm.id);
-    } else {
-      await NotificationService.cancelAll();
-    }
-
-    await StorageService.setMorningReminder(value);
-    if (!mounted) return;
-    setState(() => _isMorningReminderActive = value);
-
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(value ? "Bildirimler aktifleştirildi." : "Bildirimler kapatıldı.")),
-    );
   }
 
   Future<void> _pickTerm() async {
@@ -167,10 +144,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final Color cardColor = Theme.of(context).cardColor;
     final Color borderColor = cardBorderColor(context);
 
-    return PopScope(
-      canPop: true,
-      onPopInvokedWithResult: (didPop, _) {},
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: bgColor,
         appBar: AppBar(
           leading: IconButton(
@@ -196,42 +170,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: "Aktif Dönem", subtitle: _activeTerm.label,
               trailing: Icon(Icons.chevron_right, color: textColor.withValues(alpha: 0.4)),
               onTap: _pickTerm,
-            ),
-
-            const SizedBox(height: 32),
-            _sectionLabel("BİLDİRİMLER", textColor),
-            const SizedBox(height: 12),
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(color: cardColor, borderRadius: BorderRadius.circular(16), border: Border.all(color: borderColor), boxShadow: cardShadow(context)),
-              child: Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(color: kVibrantRed.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(12)),
-                    child: const Icon(Icons.notifications_active_outlined, color: kVibrantRed),
-                  ),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Günlük Özeti Aç", style: TextStyle(color: textColor, fontSize: 16, fontWeight: FontWeight.w500)),
-                        const SizedBox(height: 4),
-                        Text("00:00'da yarının programını, 18:00'da günün özetini otomatik hatırlatır.", style: TextStyle(color: textColor.withValues(alpha: 0.5), fontSize: 12, height: 1.4)),
-                      ],
-                    ),
-                  ),
-                  Switch(
-                    value: _isMorningReminderActive,
-                    onChanged: _toggleMorningReminder,
-                    activeThumbColor: kVibrantRed,
-                    activeTrackColor: kVibrantRed.withValues(alpha: 0.3),
-                    inactiveThumbColor: textColor.withValues(alpha: 0.5),
-                    inactiveTrackColor: cardColor,
-                  )
-                ],
-              ),
             ),
 
             const SizedBox(height: 32),
@@ -267,7 +205,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ],
         ),
-      ),
     );
   }
 

@@ -1,28 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:timezone/data/latest_all.dart' as tz_data;
-import 'package:timezone/timezone.dart' as tz;
 import 'features/splash_screen.dart';
-import 'core/services/notification_service.dart';
 import 'core/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 1. Saat ve takvim motorunu başlat
-  tz_data.initializeTimeZones();
-
-  // 🚀 TÜRKİYE SAATİ GARANTİSİ: Sistemi İstanbul saatine sabitliyoruz!
-  tz.setLocalLocation(tz.getLocation('Europe/Istanbul'));
-
-  // 2. Bildirim motorumuzu başlat
-  await NotificationService.initialize();
-
-  // 3. Kayıtlı tema tercihini yükle
+  // Kayıtlı tema tercihi
   await loadTheme();
 
-  // 4. Türkçe tarih biçimlerini (ay/gün adları) hazırla
+  // Türkçe tarih biçimlerini
   await initializeDateFormatting('tr_TR', null);
 
   runApp(const DevamsizlikTakipApp());

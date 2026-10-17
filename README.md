@@ -1,17 +1,27 @@
-# mobilproje
+# 📱 Mobile Attendance Tracking Application
 
-A new Flutter project.
+An Android mobile application developed for students to easily track their course attendance, absenteeism limits, and class schedules from a single place.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📸 Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+| Schedule / Calendar | Course Details & Attendance |
+| :---: | :---: |
+| ![UI 1](medya/home_empty.jpeg) | ![UI 2](medya/calendar_holiday.jpeg) |
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✨ Key Features
+
+* 📅 **Class Schedule & Calendar:** Visually track course days and hours.
+* 📊 **Attendance Tracking:** Real-time calculation of remaining and used attendance allowances.
+* 🎯 **User-Friendly Interface:** Clean, fast, and modern Flutter UI design.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** Flutter
+* **Language:** Dart
+* **Target Platform:** Android

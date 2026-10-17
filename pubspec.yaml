@@ -40,8 +40,6 @@ dependencies:
   image_picker: ^1.2.2
 
   shared_preferences: ^2.5.5
-  flutter_local_notifications: ^21.0.0
-  timezone: ^0.11.0
   table_calendar: ^3.1.2
   flutter_slidable: ^3.1.1
 
@@ -115,4 +113,4 @@ flutter:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/icon.png"
+  image_path: "assets/icon2.png"

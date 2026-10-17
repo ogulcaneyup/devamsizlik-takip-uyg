@@ -4,7 +4,6 @@ class Course {
   String time; // YENİ: gerçek ders saati "HH:mm" (boş olabilir)
   int rightsLeft;
   final List<String> days; // Dersin olduğu günler
-  bool notificationMuted; // YENİ: bu ders için bildirim susturuldu mu
   String term; // YENİ: ait olduğu dönem kimliği, örn. "2024-Güz"
   // YENİ: günlük yoklama işaretleri. Anahtar "yyyy-MM-dd", değer
   // "geldim" | "gelmedim" | "iptal". Bir gün için en fazla bir işaret.
@@ -17,7 +16,6 @@ class Course {
     required this.time,
     required this.rightsLeft,
     required this.days,
-    this.notificationMuted = false,
     this.term = '',
     Map<String, String>? marks,
     String? courseColor,
@@ -63,7 +61,6 @@ class Course {
       'time': time,
       'rightsLeft': rightsLeft,
       'days': days,
-      'notificationMuted': notificationMuted,
       'term': term,
       'marks': marks,
       'courseColor': courseColor,
@@ -83,7 +80,6 @@ class Course {
       rightsLeft: json['rightsLeft'],
       // Eski verilerde gün yoksa çökmemesi için güvenlik önlemi:
       days: List<String>.from(json['days'] ?? []),
-      notificationMuted: json['notificationMuted'] ?? false,
       term: json['term'] ?? '',
       marks:
           (json['marks'] as Map?)?.map(
@@ -99,7 +95,6 @@ class Course {
     String? time,
     int? rightsLeft,
     List<String>? days,
-    bool? notificationMuted,
     String? term,
     Map<String, String>? marks,
     String? courseColor,
@@ -110,7 +105,6 @@ class Course {
       time: time ?? this.time,
       rightsLeft: rightsLeft ?? this.rightsLeft,
       days: days ?? this.days,
-      notificationMuted: notificationMuted ?? this.notificationMuted,
       term: term ?? this.term,
       marks: marks ?? this.marks,
       courseColor: courseColor ?? this.courseColor,

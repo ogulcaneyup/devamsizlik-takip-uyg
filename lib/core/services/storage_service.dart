@@ -11,7 +11,6 @@ class StorageService {
   static const String _kProfile = 'profile';
   static const String _kActiveTerm = 'active_term';
   static const String _kExams = 'saved_exams';
-  static const String _kMorningReminder = 'morning_reminder';
 
   // ---------- DÖNEM ----------
 
@@ -98,17 +97,5 @@ class StorageService {
     final prefs = await SharedPreferences.getInstance();
     final str = json.encode(exams.map((e) => e.toJson()).toList());
     await prefs.setString(_kExams, str);
-  }
-
-  // ---------- BİLDİRİM ANA ANAHTARI ----------
-
-  static Future<bool> getMorningReminder() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kMorningReminder) ?? false;
-  }
-
-  static Future<void> setMorningReminder(bool value) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kMorningReminder, value);
   }
 }

@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 // "SingleTickerProviderStateMixin" animasyonun telefonun ekran yenileme hızıyla (60fps/120fps) senkronize çalışmasını sağlar
 class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  final String _appName = "DEVAMSIZLIK TAKİP";
+  static const String _appName = "DEVAMSIZLIK TAKİP";
 
   @override
   void initState() {
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 2500),
-    )..repeat(); // Sürekli tekrarla
+    )..repeat(); 
 
     // 3.5 Saniye sonra ana ekrana geçiş yap
     Future.delayed(const Duration(milliseconds: 3500), () {
